@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@arcanetechnology/react-ui-lib": "^1.8.0",
+    "@arcanetechnology/react-ui-lib": "^1.9.0",
     "@babel/eslint-parser": "^7.19.1",
     "classnames": "^2.3.2",
     "eslint": "8.27.0",

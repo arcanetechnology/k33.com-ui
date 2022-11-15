@@ -1,0 +1,52 @@
+@import '@arcanetechnology/react-ui-lib/lib/vars.scss';
+
+.inputWrapper {
+  display: flex;
+  height: 80px;
+  background: #FFFFFF;
+  border: 1px solid #C7C7CC;
+  border-radius: 24px;
+  overflow: hidden;
+
+  @media (max-width: $mobile-width) {
+    height: 56px;
+  }
+
+  input {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 0 24px;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    line-height: 24px;
+
+    @media (max-width: $mobile-width) {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    &::placeholder {
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 24px;
+      color: #6C757D;
+
+      @media (max-width: $mobile-width) {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  button {
+    margin: 8px 8px 0 0;
+    height: 64px;
+
+    @media (max-width: $mobile-width) {
+      height: 40px;
+      border-radius: 16px;
+    }
+  }
+}

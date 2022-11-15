@@ -1,11 +1,12 @@
 import CallToActionInput from 'components/CallToActionInput';
 import Page from 'components/Page';
+import Image from 'next/image';
 import styles from './index.module.scss';
 
 export default function HomePage() {
   return (
     <Page>
-      <div className={styles.heroSection}>
+      <section className={styles.heroSection}>
         <h1 className={styles.heroText}>
           <p>Safe. Secure.</p>
           <p>Digital assets.</p>
@@ -16,7 +17,16 @@ export default function HomePage() {
         </div>
 
         <CallToActionInput className={styles.input} />
-      </div>
+      </section>
+
+      <section className={styles.trustedBy}>
+        <div className={styles.text}>
+          Trusted by
+        </div>
+
+        <Image src="/trusted-by.png" className={styles.image} alt="trusted by" width={1046} height={51} />
+        <Image src="/trusted-by-mobile.png" className={styles.imageMobile} alt="trusted by" width={328} height={67} />
+      </section>
     </Page>
   );
 }

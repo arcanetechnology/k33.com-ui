@@ -8,7 +8,7 @@ export default function CallToActionInput({ className }) {
 
   return (
     <div className={cn(styles.inputWrapper, { [className]: !!className })}>
-      <input type="email" placeholder="Enter email address" disabled />
+      <input type="email" placeholder="Enter email address" />
       <Button onClick={() => { setIsPopupOpen(true); }}>
         Get Started
       </Button>

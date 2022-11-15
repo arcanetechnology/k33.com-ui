@@ -1,6 +1,7 @@
 @import '@arcanetechnology/react-ui-lib/lib/vars.scss';
 
 .heroSection {
+  padding-bottom: 60px;
   width: 658px;
 
   @media (max-width: $mobile-width) {
@@ -35,5 +36,59 @@
 
   .input {
     margin-top: 48px;
+  }
+}
+
+.trustedBy {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+  }
+
+  .text {
+    margin-right: 158px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: rgba(52, 58, 64, 0.7);
+    white-space: nowrap;
+
+    @media (max-width: 1584px) {
+      margin-right: 10vw;
+      font-size: 1.5vw;
+    }
+
+    @media (max-width: $mobile-width) {
+      margin-right: 0;
+      margin-bottom: 16px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  .image {
+    @media (max-width: 1584px) {
+      width: 75%;
+      height: 75%;
+    }
+
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
+  }
+
+  .imageMobile {
+    display: none;
+
+    @media (max-width: $mobile-width) {
+      display: block;
+    }
+
+    @media (max-width: 381px) {
+      width: 90%;
+      height: 90%;
+    }
   }
 }

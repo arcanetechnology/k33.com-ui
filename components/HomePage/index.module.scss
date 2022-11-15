@@ -5,6 +5,7 @@
   width: 658px;
 
   @media (max-width: $mobile-width) {
+    padding-bottom: 46px;
     width: auto;
   }
 
@@ -13,7 +14,7 @@
     font-size: 80px;
     line-height: 96px;
     color: #090A0B;
-  
+
     @media (max-width: $mobile-width) {
       font-weight: 600;
       font-size: 40px;
@@ -36,6 +37,10 @@
 
   .input {
     margin-top: 48px;
+
+    @media (max-width: $mobile-width) {
+      margin-top: 32px;
+    }
   }
 }
 
@@ -89,6 +94,22 @@
     @media (max-width: 381px) {
       width: 90%;
       height: 90%;
+    }
+  }
+}
+
+.listOfFeatures {
+  margin-top: 120px;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 92px;
+  }
+
+  > ul {
+    display: flex;
+
+    @media (max-width: $mobile-width) {
+      flex-direction: column;
     }
   }
 }

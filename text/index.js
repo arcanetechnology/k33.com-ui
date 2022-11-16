@@ -46,7 +46,16 @@ const __text__ = {
       'Seamless onboarding',
       'Fully regulated exposure'
     ]
-  }
+  },
+
+  INVESTMENT_MANAGER_HERO: {
+    firstLine: 'Are you an investment manager?',
+    secondLine: 'Do you want to offer digital assets exposure to your clients?'
+  },
+
+  IM_RESEARCH_SUMMARY: 'Access to analysts to help investment decision making',
+  IM_ADVICE_SUMMARY: 'A dedicated tool to manage your clients digital assets trading & investment',
+  IM_MARKETS_SUMMARY: 'Market updates & research reports to keep your clients informed'
 };
 
 export default __text__;

@@ -3,7 +3,7 @@ import FeatureList from 'components/FeatureList';
 import Page from 'components/Page';
 import Image from 'next/image';
 import __text__ from 'text';
-import FeatureSummary from './FeatureSummary';
+import FeatureSummaryList from './FeatureSummaryList';
 import styles from './index.module.scss';
 
 export default function HomePage() {
@@ -35,31 +35,31 @@ export default function HomePage() {
         <Image src="/trusted-by-mobile.png" className={styles.imageMobile} alt="trusted by" width={328} height={67} />
       </section>
 
-      <section className={styles.featureSummary}>
-        <ul>
-          <FeatureSummary
-            imageSrc="/lof-research.png"
-            imageWidth={110}
-            imageHeight={110}
-            title="Research"
-            text={__text__.RESEARCH_SUMMARY}
-          />
-          <FeatureSummary
-            imageSrc="/lof-markets.png"
-            imageWidth={112}
-            imageHeight={113}
-            title="Markets"
-            text={__text__.MARKETS_SUMMARY}
-          />
-          <FeatureSummary
-            imageSrc="/lof-investments.png"
-            imageWidth={114}
-            imageHeight={114}
-            title="Investments"
-            text={__text__.INVESTMENTS_SUMMARY}
-          />
-        </ul>
-      </section>
+      <FeatureSummaryList
+        data={[
+          {
+            imageSrc: '/lof-research.png',
+            imageWidth: 110,
+            imageHeight: 110,
+            title: 'Research',
+            text: __text__.RESEARCH_SUMMARY
+          },
+          {
+            imageSrc: '/lof-markets.png',
+            imageWidth: 112,
+            imageHeight: 113,
+            title: 'Markets',
+            text: __text__.MARKETS_SUMMARY
+          },
+          {
+            imageSrc: '/lof-investments.png',
+            imageWidth: 114,
+            imageHeight: 114,
+            title: 'Investments',
+            text: __text__.INVESTMENTS_SUMMARY
+          }
+        ]}
+      />
 
       <FeatureList
         className={styles.featureListSection}
@@ -76,6 +76,40 @@ export default function HomePage() {
           {
             imgSrc: '/iPhone-13-Pro-Mockup-Perspective-Left-Floating-Shadow.png',
             ...__text__.SECURE_YOUR_WEALTH
+          }
+        ]}
+      />
+
+      <section className={styles.whatWeOfferSection}>
+        <div className={styles.title}>
+          <p>{__text__.INVESTMENT_MANAGER_HERO.firstLine}&nbsp;</p>
+          <p>{__text__.INVESTMENT_MANAGER_HERO.secondLine}</p>
+        </div>
+      </section>
+
+      <FeatureSummaryList
+        small
+        data={[
+          {
+            imageSrc: '/im-research.png',
+            imageWidth: 60,
+            imageHeight: 64,
+            title: 'Research',
+            text: __text__.IM_RESEARCH_SUMMARY
+          },
+          {
+            imageSrc: '/im-advice.png',
+            imageWidth: 64,
+            imageHeight: 64,
+            title: 'Advice',
+            text: __text__.IM_ADVICE_SUMMARY
+          },
+          {
+            imageSrc: '/im-markets.png',
+            imageWidth: 64,
+            imageHeight: 64,
+            title: 'Markets',
+            text: __text__.IM_MARKETS_SUMMARY
           }
         ]}
       />

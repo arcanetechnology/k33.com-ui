@@ -2,7 +2,7 @@ import CallToActionInput from 'components/CallToActionInput';
 import FeatureList from 'components/FeatureList';
 import Page from 'components/Page';
 import Image from 'next/image';
-import text from 'text';
+import __text__ from 'text';
 import FeatureSummary from './FeatureSummary';
 import styles from './index.module.scss';
 
@@ -11,13 +11,11 @@ export default function HomePage() {
     <Page>
       <section className={styles.heroSection}>
         <h1 className={styles.heroText}>
-          <p>Safe. Secure.</p>
-          <p>Digital assets.</p>
+          <p>{__text__.HERO.firstLine}</p>
+          <p>{__text__.HERO.secondLine}</p>
         </h1>
 
-        <div className={styles.subText}>
-          Make informed decisions backed by industry leading research, enter the market guided by our multi-exchange brokerage service, and invest safely for the long term in tailored managed funds.
-        </div>
+        <div className={styles.subText}>{__text__.HERO_SUBTEXT}</div>
 
         <CallToActionInput className={styles.input} />
       </section>
@@ -38,21 +36,21 @@ export default function HomePage() {
             imageWidth={110}
             imageHeight={110}
             title="Research"
-            text="Weekly reports on digital asset markets & macro, from industry leading analysts."
+            text={__text__.RESEARCH_SUMMARY}
           />
           <FeatureSummary
             imageSrc="/lof-markets.png"
             imageWidth={112}
             imageHeight={113}
             title="Markets"
-            text="Get best execution across multiple exchanges, with a custody solution tailored just for you."
+            text={__text__.MARKETS_SUMMARY}
           />
           <FeatureSummary
             imageSrc="/lof-investments.png"
             imageWidth={114}
             imageHeight={114}
             title="Investments"
-            text="Gain long-term managed exposure to digital assets through tailored managed funds."
+            text={__text__.INVESTMENTS_SUMMARY}
           />
         </ul>
       </section>
@@ -62,16 +60,16 @@ export default function HomePage() {
         data={[
           {
             imgSrc: '/iPhone-13-Pro-Mockup-Perspective-Left.png',
-            ...text.GET_REAL_INSIGHT
+            ...__text__.GET_REAL_INSIGHT
           },
           {
             reverse: true,
             imgSrc: '/iPhone-13-Pro-Mockup-Perspective-Right-Floating-Shadow.png',
-            ...text.TRADE_WITH_CONVICTION
+            ...__text__.TRADE_WITH_CONVICTION
           },
           {
             imgSrc: '/iPhone-13-Pro-Mockup-Perspective-Left-Floating-Shadow.png',
-            ...text.SECURE_YOUR_WEALTH
+            ...__text__.SECURE_YOUR_WEALTH
           }
         ]}
       />

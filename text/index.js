@@ -1,4 +1,16 @@
-const text = {
+/* eslint-disable max-len */
+const __text__ = {
+
+  HERO: {
+    firstLine: 'Safe. Secure.',
+    secondLine: 'Digital assets.'
+  },
+
+  HERO_SUBTEXT: 'Make informed decisions backed by industry leading research, enter the market guided by our multi-exchange brokerage service, and invest safely for the long term in tailored managed funds.',
+
+  RESEARCH_SUMMARY: 'Weekly reports on digital asset markets & macro, from industry leading analysts.',
+  MARKETS_SUMMARY: 'Get best execution across multiple exchanges, with a custody solution tailored just for you.',
+  INVESTMENTS_SUMMARY: 'Gain long-term managed exposure to digital assets through tailored managed funds.',
 
   GET_REAL_INSIGHT: {
     title: 'Get real insight',
@@ -37,4 +49,4 @@ const text = {
   }
 };
 
-export default text;
+export default __text__;

@@ -10,14 +10,20 @@ export default function HomePage() {
   return (
     <Page>
       <section className={styles.heroSection}>
-        <h1 className={styles.heroText}>
-          <p>{__text__.HERO.firstLine}</p>
-          <p>{__text__.HERO.secondLine}</p>
-        </h1>
+        <div className={styles.content}>
+          <h1 className={styles.heroText}>
+            <p>{__text__.HERO.firstLine}</p>
+            <p>{__text__.HERO.secondLine}</p>
+          </h1>
 
-        <div className={styles.subText}>{__text__.HERO_SUBTEXT}</div>
+          <div className={styles.subText}>{__text__.HERO_SUBTEXT}</div>
 
-        <CallToActionInput className={styles.input} />
+          <CallToActionInput className={styles.input} />
+        </div>
+
+        <div className={styles.imageWrapper}>
+          <img src="/hero.png" alt="" />
+        </div>
       </section>
 
       <section className={styles.trustedBy}>

@@ -1,45 +1,86 @@
 @import '@arcanetechnology/react-ui-lib/lib/vars.scss';
 
+$app-break-point: 1260px; // the hero section needs to break early
+
 .heroSection {
-  padding-bottom: 60px;
-  width: 658px;
+  display: flex;
+  justify-content: space-between;
+  gap: 44px;
+  margin-bottom: 56px;
 
-  @media (max-width: $mobile-width) {
-    padding-bottom: 46px;
-    width: auto;
+  @media (max-width: $app-break-point) {
+    flex-direction: column;
+    gap: 46px;
   }
 
-  .heroText {
-    font-weight: 600;
-    font-size: 80px;
-    line-height: 96px;
-    color: #090A0B;
+  .content {
+    width: 658px;
 
-    @media (max-width: $mobile-width) {
+    @media (max-width: $app-break-point) {
+      width: auto;
+    }
+
+    .heroText {
       font-weight: 600;
-      font-size: 40px;
-      line-height: 48px;
+      font-size: 80px;
+      line-height: 96px;
+      color: #090A0B;
+
+      @media (max-width: 1548px) {
+        font-size: 5vw;
+        line-height: 5.2vw;
+      }
+
+      @media (max-width: $app-break-point) {
+        font-size: 80px;
+        line-height: 96px;
+      }
+
+      @media (max-width: $mobile-width) {
+        font-size: 40px;
+        line-height: 48px;
+      }
+    }
+
+    .subText {
+      margin-top: 16px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #6C757D;
+
+      @media (max-width: $mobile-width) {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+
+    .input {
+      margin-top: 48px;
+
+      @media (max-width: $mobile-width) {
+        margin-top: 32px;
+      }
     }
   }
 
-  .subText {
-    margin-top: 16px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #6C757D;
+  .imageWrapper {
+    margin-right: -120px;
+    text-align: right;
+    overflow: hidden;
 
     @media (max-width: $mobile-width) {
-      font-size: 12px;
-      line-height: 16px;
+      margin-right: -24px;
     }
-  }
 
-  .input {
-    margin-top: 48px;
+    > img {
+      @media (max-width: 1666px) {
+        width: 90%;
+      }
 
-    @media (max-width: $mobile-width) {
-      margin-top: 32px;
+      @media (max-width: $app-break-point) {
+        width: 100%;
+      }
     }
   }
 }

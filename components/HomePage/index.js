@@ -1,7 +1,9 @@
 import CallToActionInput from 'components/CallToActionInput';
+import FeatureList from 'components/FeatureList';
 import Page from 'components/Page';
 import Image from 'next/image';
-import FeatureItem from './FeatureItem';
+import text from 'text';
+import FeatureSummary from './FeatureSummary';
 import styles from './index.module.scss';
 
 export default function HomePage() {
@@ -29,23 +31,23 @@ export default function HomePage() {
         <Image src="/trusted-by-mobile.png" className={styles.imageMobile} alt="trusted by" width={328} height={67} />
       </section>
 
-      <section className={styles.listOfFeatures}>
+      <section className={styles.featureSummary}>
         <ul>
-          <FeatureItem
+          <FeatureSummary
             imageSrc="/lof-research.png"
             imageWidth={110}
             imageHeight={110}
             title="Research"
             text="Weekly reports on digital asset markets & macro, from industry leading analysts."
           />
-          <FeatureItem
+          <FeatureSummary
             imageSrc="/lof-markets.png"
             imageWidth={112}
             imageHeight={113}
             title="Markets"
             text="Get best execution across multiple exchanges, with a custody solution tailored just for you."
           />
-          <FeatureItem
+          <FeatureSummary
             imageSrc="/lof-investments.png"
             imageWidth={114}
             imageHeight={114}
@@ -54,6 +56,25 @@ export default function HomePage() {
           />
         </ul>
       </section>
+
+      <FeatureList
+        className={styles.featureListSection}
+        data={[
+          {
+            imgSrc: '/iPhone-13-Pro-Mockup-Perspective-Left.png',
+            ...text.GET_REAL_INSIGHT
+          },
+          {
+            reverse: true,
+            imgSrc: '/iPhone-13-Pro-Mockup-Perspective-Right-Floating-Shadow.png',
+            ...text.TRADE_WITH_CONVICTION
+          },
+          {
+            imgSrc: '/iPhone-13-Pro-Mockup-Perspective-Left-Floating-Shadow.png',
+            ...text.SECURE_YOUR_WEALTH
+          }
+        ]}
+      />
     </Page>
   );
 }

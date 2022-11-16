@@ -53,6 +53,8 @@ const __text__ = {
     secondLine: 'Do you want to offer digital assets exposure to your clients?'
   },
 
+  INVESTMENT_MANAGER_SUBTEXT: 'What we offer',
+
   IM_RESEARCH_SUMMARY: 'Access to analysts to help investment decision making',
   IM_ADVICE_SUMMARY: 'A dedicated tool to manage your clients digital assets trading & investment',
   IM_MARKETS_SUMMARY: 'Market updates & research reports to keep your clients informed'

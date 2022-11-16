@@ -3,17 +3,17 @@ import cn from 'classnames';
 import { useState } from 'react';
 import styles from './index.module.scss';
 
-export default function CallToActionInput({ className }) {
+export default function CallToActionInput({ className, label }) {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   return (
     <div className={cn(styles.inputWrapper, { [className]: !!className })}>
       <div className={styles.emailWrapper}>
-        <input type="email" placeholder="Enter email address" />
+        <input type="email" placeholder="Enter your email" />
       </div>
 
       <Button onClick={() => { setIsPopupOpen(true); }}>
-        Get Started
+        {label || 'Get Started'}
       </Button>
 
       <Popup showCloseIcon isOpen={isPopupOpen} onClose={() => { setIsPopupOpen(false); }}>

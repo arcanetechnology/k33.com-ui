@@ -85,34 +85,38 @@ export default function HomePage() {
           <p>{__text__.INVESTMENT_MANAGER_HERO.firstLine}&nbsp;</p>
           <p>{__text__.INVESTMENT_MANAGER_HERO.secondLine}</p>
         </div>
-      </section>
 
-      <FeatureSummaryList
-        small
-        data={[
-          {
-            imageSrc: '/im-research.png',
-            imageWidth: 60,
-            imageHeight: 64,
-            title: 'Research',
-            text: __text__.IM_RESEARCH_SUMMARY
-          },
-          {
-            imageSrc: '/im-advice.png',
-            imageWidth: 64,
-            imageHeight: 64,
-            title: 'Advice',
-            text: __text__.IM_ADVICE_SUMMARY
-          },
-          {
-            imageSrc: '/im-markets.png',
-            imageWidth: 64,
-            imageHeight: 64,
-            title: 'Markets',
-            text: __text__.IM_MARKETS_SUMMARY
-          }
-        ]}
-      />
+        <div className={styles.subText}>{__text__.INVESTMENT_MANAGER_SUBTEXT}</div>
+
+        <FeatureSummaryList
+          small
+          data={[
+            {
+              imageSrc: '/im-research.png',
+              imageWidth: 60,
+              imageHeight: 64,
+              title: 'Research',
+              text: __text__.IM_RESEARCH_SUMMARY
+            },
+            {
+              imageSrc: '/im-advice.png',
+              imageWidth: 64,
+              imageHeight: 64,
+              title: 'Advice',
+              text: __text__.IM_ADVICE_SUMMARY
+            },
+            {
+              imageSrc: '/im-markets.png',
+              imageWidth: 64,
+              imageHeight: 64,
+              title: 'Markets',
+              text: __text__.IM_MARKETS_SUMMARY
+            }
+          ]}
+        />
+
+        <CallToActionInput className={styles.input} label="Get Early Access" />
+      </section>
     </Page>
   );
 }

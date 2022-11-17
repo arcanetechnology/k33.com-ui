@@ -21,7 +21,7 @@ export default function CallToActionInput({ className, label }) {
         <input disabled type="email" placeholder="Enter your email" onChange={(e) => { setEmail(e.target.value); }} />
       </div>
 
-      <Button onClick={sendEmail}>
+      <Button disabled onClick={sendEmail}>
         {label || 'Get Started'}
       </Button>
     </div>

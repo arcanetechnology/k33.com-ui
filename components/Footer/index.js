@@ -1,3 +1,4 @@
+import Logo from 'components/Logo';
 import NextLink from 'components/NextLink';
 import Heart from 'svg/Heart';
 import config from './footer-config';
@@ -8,7 +9,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.mainPart}>
         <div className={styles.logoWrapper}>
-          <img src="/K33.svg" alt="K33" className={styles.logo} />
+          <Logo className={styles.logo} />
         </div>
 
         <div className={styles.menuList}>

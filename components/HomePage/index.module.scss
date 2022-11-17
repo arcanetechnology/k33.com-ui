@@ -5,12 +5,14 @@ $app-break-point: 1299px; // the hero section needs to break early
 .heroSection {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 44px;
   margin-bottom: 56px;
 
   @media (max-width: $app-break-point) {
     flex-direction: column;
     gap: 46px;
+    margin-top: 52px;
   }
 
   .content {

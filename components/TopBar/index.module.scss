@@ -1,0 +1,46 @@
+@import '@arcanetechnology/react-ui-lib/lib/vars.scss';
+
+.topBar {
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 120px;
+    width: 100%;
+    height: 88px;
+
+    @media (max-width: $mobile-width) {
+      padding: 0 24px;
+      height: 64px;
+    }
+
+    .logo {
+      width: 133px;
+      height: 40px;
+
+      @media (max-width: $mobile-width) {
+        width: 63px;
+        height: 19px;
+      }
+    }
+  }
+
+  .subline {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 120px;
+    width: 100%;
+    height: 40px;
+    background-color: #F9F9F9;
+
+    @media (max-width: $mobile-width) {
+      padding: 0 24px;
+    }
+
+    .sublogo {
+      height: 12px;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import { Button } from '@arcanetechnology/react-ui-lib';
 import cn from 'classnames';
+import ComingSoon from 'components/ComingSoon';
 import styles from './index.module.scss';
 
 export default function FeatureList({ data, className }) {
@@ -11,6 +12,9 @@ export default function FeatureList({ data, className }) {
             <img className={styles.image} src={item.imgSrc} alt={item.title} />
           </div>
           <div className={styles.contentItem}>
+            {item.comingSoon && (
+              <ComingSoon className={styles.comingSoon} />
+            )}
             <div className={styles.title}>{item.title}</div>
             <div className={styles.subtitle}>{item.subtitle}</div>
             <ul className={styles.keyPoints}>
@@ -18,7 +22,9 @@ export default function FeatureList({ data, className }) {
                 <li key={point}>{point}</li>
               ))}
             </ul>
-            <Button arrowRight>Find Out More</Button>
+            {!item.comingSoon && (
+              <Button arrowRight>Find Out More</Button>
+            )}
           </div>
         </div>
       ))}

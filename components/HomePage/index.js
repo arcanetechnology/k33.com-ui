@@ -74,6 +74,7 @@ export default function HomePage() {
             ...__text__.TRADE_WITH_CONVICTION
           },
           {
+            comingSoon: true,
             imgSrc: '/iPhone-13-Pro-Mockup-Perspective-Left-Floating-Shadow.png',
             ...__text__.SECURE_YOUR_WEALTH
           }

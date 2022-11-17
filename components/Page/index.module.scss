@@ -1,9 +1,15 @@
 @import '@arcanetechnology/react-ui-lib/lib/vars.scss';
 
 .page {
-  padding: 60px 120px 0 120px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1728px;
 
-  @media (max-width: $mobile-width) {
-    padding: 60px 24px 0 24px;
+  .children {
+    padding: 60px 120px 0 120px;
+
+    @media (max-width: $mobile-width) {
+      padding: 60px 24px 0 24px;
+    }
   }
 }

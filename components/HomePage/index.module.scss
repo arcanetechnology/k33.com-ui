@@ -173,13 +173,15 @@ $app-break-point: 1260px; // the hero section needs to break early
 
   .subText {
     margin-top: 24px;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 24px;
     text-align: center;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #2D3339;
 
     @media (max-width: $mobile-width) {
       margin-top: 8px;
+      color: #6C757D;
     }
   }
 
@@ -188,7 +190,7 @@ $app-break-point: 1260px; // the hero section needs to break early
     max-width: 674px;
 
     @media (max-width: $mobile-width) {
-      margin-top: 120px;
+      margin-top: 72px;
     }
   }
 }

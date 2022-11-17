@@ -116,7 +116,7 @@ export default function HomePage() {
           ]}
         />
 
-        <CallToActionInput className={styles.input} label="Get Early Access" />
+        <CallToActionInput className={styles.input} />
       </section>
     </Page>
   );

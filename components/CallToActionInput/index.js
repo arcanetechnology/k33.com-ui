@@ -3,7 +3,7 @@ import cn from 'classnames';
 import { useState } from 'react';
 import styles from './index.module.scss';
 
-export default function CallToActionInput({ className, label }) {
+export default function CallToActionInput({ className }) {
   const [email, setEmail] = useState('');
   const [isSending, setIsSending] = useState(false);
 
@@ -47,7 +47,7 @@ export default function CallToActionInput({ className, label }) {
       </div>
 
       <Button onClick={sendEmail} disabled={isSending}>
-        {label || 'Get Started'}
+        Get Early Access
       </Button>
     </div>
   );

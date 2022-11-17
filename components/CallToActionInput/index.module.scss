@@ -10,7 +10,7 @@
   pointer-events: none;
 
   @media (max-width: $mobile-width) {
-    height: 56px;
+    height: 44px;
   }
 
   .emailWrapper {
@@ -56,7 +56,8 @@
     white-space: nowrap;
 
     @media (max-width: $mobile-width) {
-      height: 40px;
+      height: 28px;
+      font-size: 12px;
     }
 
     @media (max-width: 381px) {

@@ -18,10 +18,10 @@ export default function CallToActionInput({ className, label }) {
   return (
     <div className={cn(styles.inputWrapper, { [className]: !!className })}>
       <div className={styles.emailWrapper}>
-        <input disabled type="email" placeholder="Enter your email" onChange={(e) => { setEmail(e.target.value); }} />
+        <input type="email" placeholder="Enter your email" onChange={(e) => { setEmail(e.target.value); }} />
       </div>
 
-      <Button disabled onClick={sendEmail}>
+      <Button onClick={sendEmail}>
         {label || 'Get Started'}
       </Button>
     </div>

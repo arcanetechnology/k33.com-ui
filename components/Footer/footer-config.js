@@ -3,15 +3,11 @@ const config = [
     title: 'Products',
     list: [
       {
-        label: 'Home',
-        url: '/'
-      },
-      {
         label: 'Research',
         url: '/research'
       },
       {
-        label: 'Market',
+        label: 'Markets',
         url: '#'
       },
       {

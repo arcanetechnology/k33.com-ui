@@ -69,18 +69,18 @@ export default function HomePage() {
         className={styles.featureListSection}
         data={[
           {
-            imgSrc: '/iPhone-13-Pro-Mockup-Perspective-Left.png',
+            imgSrc: '/Get-real-insight.png',
             buttonUrl: '/research',
             ...__text__.GET_REAL_INSIGHT
           },
           {
             reverse: true,
-            imgSrc: '/iPhone-13-Pro-Mockup-Perspective-Right-Floating-Shadow.png',
+            imgSrc: '/Trade-with-conviction.png',
             ...__text__.TRADE_WITH_CONVICTION
           },
           {
             comingSoon: true,
-            imgSrc: '/iPhone-13-Pro-Mockup-Perspective-Left-Floating-Shadow.png',
+            imgSrc: '/Secure-your-wealth.png',
             ...__text__.SECURE_YOUR_WEALTH
           }
         ]}

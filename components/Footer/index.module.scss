@@ -73,12 +73,9 @@
             color: rgba(52, 58, 64, 0.3);
             transition: color 0.2s;
 
-            &.active {
-              color: rgba(52, 58, 64, 0.7);
-            }
-
             &:hover {
               color: rgba(52, 58, 64, 0.7);
+              text-decoration: underline;
             }
           }
         }

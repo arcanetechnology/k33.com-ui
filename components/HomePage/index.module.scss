@@ -24,7 +24,7 @@
     .heroText {
       @media (max-width: 1548px) {
         font-size: 5vw;
-        line-height: 5.2vw;
+        line-height: 6.2vw;
       }
 
       @media (max-width: $app-break-point) {
@@ -137,11 +137,7 @@
 }
 
 .featureListSection {
-  margin-top: 260px;
-
-  @media (max-width: $mobile-width) {
-    margin-top: 124px;
-  }
+  margin-top: 120px;
 }
 
 .whatWeOfferSection {

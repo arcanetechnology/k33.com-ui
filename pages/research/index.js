@@ -1,32 +1,18 @@
-import CallToActionInput from 'components/CallToActionInput';
-import HeroText from 'components/HeroText';
+import HeroTopSection from 'components/HeroTopSection';
 import Page from 'components/Page';
 import Image from 'next/image';
-import styles from './index.module.scss';
+import __text__ from 'text/research';
+// import styles from './index.module.scss';
 
 export default function ResearchPage() {
   return (
     <Page subLogo={{ image: '/research-logo.png' }}>
-      <section className={styles.heroSection}>
-        <div className={styles.leftImageWrapper}>
-          <Image src="/research-left-bg.png" width={241} height={576} alt="" />
-        </div>
-
-        <div className={styles.content}>
-          <HeroText
-            className={styles.heroText}
-            text="Get real insight from industry experts"
-          />
-
-          <div className={styles.subText}>Understand the digital assets industry, gain insight into the markets, and go deep on the protocols that matter.</div>
-
-          <CallToActionInput className={styles.input} />
-        </div>
-
-        <div className={styles.rightImageWrapper}>
-          <Image src="/research-right-bg.png" width={214} height={598} alt="" />
-        </div>
-      </section>
+      <HeroTopSection
+        heroText={__text__.HERO}
+        subText={__text__.HERO_SUBTEXT}
+        leftImage={<Image src="/research-left-bg.png" width={241} height={576} alt="" />}
+        rightImage={<Image src="/research-right-bg.png" width={214} height={598} alt="" />}
+      />
     </Page>
   );
 }

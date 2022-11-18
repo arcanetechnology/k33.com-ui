@@ -1,0 +1,9 @@
+@import '@arcanetechnology/react-ui-lib/lib/vars.scss';
+
+.heroSection {
+  margin-top: 16px;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 0px;
+  }
+}

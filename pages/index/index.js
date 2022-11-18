@@ -4,7 +4,7 @@ import HeroText from 'components/HeroText';
 import FeatureSummaryList from 'components/FeatureSummaryList';
 import Page from 'components/Page';
 import Image from 'next/image';
-import __text__ from 'text';
+import __text__ from 'text/home';
 import styles from './index.module.scss';
 
 export default function HomePage() {

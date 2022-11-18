@@ -1,0 +1,88 @@
+@import '@arcanetechnology/react-ui-lib/lib/vars.scss';
+@import 'app-vars.scss';
+
+.heroTopSection {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1000px;
+
+    @media (max-width: 1548px) {
+      max-width: 56vw;
+    }
+
+    @media (max-width: $app-break-point) {
+      margin-top: 132px;
+      // max-width: 660px;
+    }
+
+    @media (max-width: $mobile-width) {
+      align-items: flex-start;
+      margin-top: 52px;
+      max-width: 100%;
+    }
+
+    .heroText {
+      text-align: center;
+
+      @media (max-width: 1548px) {
+        font-size: 4vw;
+        line-height: 4.96vw;
+      }
+
+      @media (max-width: $mobile-width) {
+        font-size: 40px;
+        line-height: 48px;
+        text-align: left;
+      }
+    }
+
+    .subText {
+      margin-top: 16px;
+      max-width: 560px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: #6C757D;
+
+      @media (max-width: $mobile-width) {
+        font-size: 12px;
+        line-height: 16px;
+        text-align: left;
+      }
+    }
+
+    .input {
+      margin-top: 48px;
+      width: 609px;
+
+      @media (max-width: $mobile-width) {
+        margin-top: 32px;
+        width: 100%;
+      }
+    }
+  }
+
+  .leftImageWrapper {
+    margin-left: -120px;
+
+    @media (max-width: $app-break-point) {
+      display: none;
+    }
+  }
+
+  .rightImageWrapper {
+    margin-right: -120px;
+
+    @media (max-width: $app-break-point) {
+      display: none;
+    }
+  }
+}

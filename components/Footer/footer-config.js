@@ -8,7 +8,7 @@ const config = [
       },
       {
         label: 'Markets',
-        url: '#'
+        url: '/markets'
       },
       {
         label: 'Investments',

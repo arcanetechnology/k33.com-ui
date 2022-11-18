@@ -1,6 +1,7 @@
 import CallToActionInput from 'components/CallToActionInput';
 import HeroText from 'components/HeroText';
 import Page from 'components/Page';
+import Image from 'next/image';
 import styles from './index.module.scss';
 
 export default function ResearchPage() {
@@ -8,7 +9,7 @@ export default function ResearchPage() {
     <Page subLogo={{ image: '/research-logo.png' }}>
       <section className={styles.heroSection}>
         <div className={styles.leftImageWrapper}>
-          <img src="/research-left-bg.png" alt="" />
+          <Image src="/research-left-bg.png" width={241} height={576} alt="" />
         </div>
 
         <div className={styles.content}>
@@ -23,7 +24,7 @@ export default function ResearchPage() {
         </div>
 
         <div className={styles.rightImageWrapper}>
-          <img src="/research-right-bg.png" alt="" />
+          <Image src="/research-right-bg.png" width={214} height={598} alt="" />
         </div>
       </section>
     </Page>

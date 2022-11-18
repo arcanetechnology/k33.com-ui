@@ -1,6 +1,7 @@
 import { Button } from '@arcanetechnology/react-ui-lib';
 import cn from 'classnames';
 import ComingSoon from 'components/ComingSoon';
+import NextLink from 'components/NextLink';
 import styles from './index.module.scss';
 
 export default function FeatureList({ data, className }) {
@@ -23,7 +24,9 @@ export default function FeatureList({ data, className }) {
               ))}
             </ul>
             {!item.comingSoon && (
-              <Button arrowRight>Find Out More</Button>
+              <NextLink href={item.buttonUrl || '/'}>
+                <Button arrowRight>Find Out More</Button>
+              </NextLink>
             )}
           </div>
         </div>

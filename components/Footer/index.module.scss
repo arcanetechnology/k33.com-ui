@@ -73,7 +73,7 @@
             color: rgba(52, 58, 64, 0.3);
             transition: color 0.2s;
 
-            .active {
+            &.active {
               color: rgba(52, 58, 64, 0.7);
             }
 

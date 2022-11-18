@@ -4,11 +4,11 @@ const config = [
     list: [
       {
         label: 'Home',
-        url: '#'
+        url: '/'
       },
       {
         label: 'Research',
-        url: '#'
+        url: '/research'
       },
       {
         label: 'Market',

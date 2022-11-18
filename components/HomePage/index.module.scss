@@ -1,6 +1,5 @@
 @import '@arcanetechnology/react-ui-lib/lib/vars.scss';
-
-$app-break-point: 1299px; // the hero section needs to break early
+@import 'app-vars.scss';
 
 .heroSection {
   display: flex;
@@ -23,11 +22,6 @@ $app-break-point: 1299px; // the hero section needs to break early
     }
 
     .heroText {
-      font-weight: 600;
-      font-size: 80px;
-      line-height: 96px;
-      color: #090A0B;
-
       @media (max-width: 1548px) {
         font-size: 5vw;
         line-height: 5.2vw;

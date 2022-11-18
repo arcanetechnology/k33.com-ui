@@ -1,0 +1,13 @@
+@import '@arcanetechnology/react-ui-lib/lib/vars.scss';
+
+.heroText {
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 96px;
+  color: #090A0B;
+
+  @media (max-width: $mobile-width) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}

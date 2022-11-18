@@ -1,5 +1,6 @@
 import CallToActionInput from 'components/CallToActionInput';
 import FeatureList from 'components/FeatureList';
+import HeroText from 'components/HeroText';
 import Page from 'components/Page';
 import Image from 'next/image';
 import __text__ from 'text';
@@ -11,10 +12,13 @@ export default function HomePage() {
     <Page>
       <section className={styles.heroSection}>
         <div className={styles.content}>
-          <h1 className={styles.heroText}>
-            <p>{__text__.HERO.firstLine}</p>
-            <p>{__text__.HERO.secondLine}</p>
-          </h1>
+          <HeroText
+            className={styles.heroText}
+            text={[
+              __text__.HERO.firstLine,
+              __text__.HERO.secondLine
+            ]}
+          />
 
           <div className={styles.subText}>{__text__.HERO_SUBTEXT}</div>
 
@@ -66,6 +70,7 @@ export default function HomePage() {
         data={[
           {
             imgSrc: '/iPhone-13-Pro-Mockup-Perspective-Left.png',
+            buttonUrl: '/research',
             ...__text__.GET_REAL_INSIGHT
           },
           {

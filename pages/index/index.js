@@ -46,14 +46,16 @@ export default function HomePage() {
             imageWidth: 110,
             imageHeight: 110,
             title: 'Research',
-            text: __text__.RESEARCH_SUMMARY
+            text: __text__.RESEARCH_SUMMARY,
+            url: '/research'
           },
           {
             imageSrc: '/lof-markets.png',
             imageWidth: 112,
             imageHeight: 113,
             title: 'Markets',
-            text: __text__.MARKETS_SUMMARY
+            text: __text__.MARKETS_SUMMARY,
+            url: '/markets'
           },
           {
             imageSrc: '/lof-investments.png',
@@ -76,6 +78,7 @@ export default function HomePage() {
           {
             reverse: true,
             imgSrc: '/Trade-with-conviction.png',
+            buttonUrl: '/markets',
             ...__text__.TRADE_WITH_CONVICTION
           },
           {

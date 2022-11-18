@@ -15,6 +15,7 @@ export default function FeatureSummaryList({ data, small }) {
             imageHeight={item.imageHeight}
             title={item.title}
             text={item.text}
+            url={item.url}
           />
         ))}
       </ul>

@@ -61,6 +61,12 @@
       max-width: 314px;
     }
 
+    .link:hover {
+      .title {
+        text-decoration: underline;
+      }
+    }
+
     .title {
       margin-top: 32px;
       font-weight: 600;

@@ -2,7 +2,40 @@
 const __text__ = {
 
   HERO: 'Get real insight from industry experts',
-  HERO_SUBTEXT: 'Understand the digital assets industry, gain insight into the markets, and go deep on the protocols that matter.'
+  HERO_SUBTEXT: 'Understand the digital assets industry, gain insight into the markets, and go deep on the protocols that matter.',
+
+  OUR_PHILOSOPHY_HEADER: 'Our research philosophy',
+  OUR_PHILOSOPHY_TEXT: 'The market and narratives dominate in the short term, but in the long run fundamentals will prevail. Our industry leading research is a necessary source of information for everyone that’s serious about investing in digital assets.',
+
+  AHEAD_OF_THE_CURVE: {
+    title: 'Ahead of the Curve',
+    subtitle: 'Our weekly market report. Delivered directly to your inbox.',
+    keyPoints: [
+      'Understand what’s moving the digital asset market',
+      'Be prepared for tomorrow’s price action',
+      'Data-driven analysis of spot and derivatives'
+    ]
+  },
+
+  THE_FUNDAMENTALS: {
+    title: 'The Fundamentals',
+    subtitle: 'In-depth reports on individual protocols and valuations.',
+    keyPoints: [
+      'Deep dives into individual protocols',
+      'Frameworks to value the fundamentals of a token',
+      'Access to valuation models'
+    ]
+  },
+
+  THE_FRIDAY_FOCUS: {
+    title: 'The Friday Focus',
+    subtitle: 'Our weekly news recap. Curated by us, for you.',
+    keyPoints: [
+      'Summarises the most important news of the week',
+      'Links to original sources',
+      'Coverage across web, Twitter, Discord and Telegram'
+    ]
+  }
 };
 
 export default __text__;

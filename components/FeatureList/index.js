@@ -4,6 +4,18 @@ import ComingSoon from 'components/ComingSoon';
 import NextLink from 'components/NextLink';
 import styles from './index.module.scss';
 
+/**
+ *
+ * @param {Array} data: Array of objects describing one feature:
+ *                         - reverse: if true, content is on the left and image is on the right
+ *                         - title,
+ *                         - subtitle
+ *                         - imgSrc
+ *                         - comingSoon: if true, displays a Coming Soon label instead of an action button
+ *                         - keyPoints: Array of Strings, each representing a bullet point,
+ *                         - buttonUrl
+ * @param {String} className
+ */
 export default function FeatureList({ data, className }) {
   return (
     <div className={cn(styles.featureList, { [className]: !!className })}>

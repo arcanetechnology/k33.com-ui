@@ -1,7 +1,10 @@
 import { Button } from '@arcanetechnology/react-ui-lib';
 import cn from 'classnames';
+import CallToActionInput from 'components/CallToActionInput';
 import ComingSoon from 'components/ComingSoon';
+import KeyPoints from 'components/KeyPoints';
 import NextLink from 'components/NextLink';
+import useIsDarkMode from 'hooks/useIsDarkMode';
 import styles from './index.module.scss';
 
 /**
@@ -14,31 +17,38 @@ import styles from './index.module.scss';
  *                         - comingSoon: if true, displays a Coming Soon label instead of an action button
  *                         - keyPoints: Array of Strings, each representing a bullet point,
  *                         - buttonUrl
+ *                         - callToActionInput: displays call to action input instead of a button
+ *                         - panRightContentItem: pans the right content item to the endge of the page
  * @param {String} className
  */
 export default function FeatureList({ data, className }) {
+  const isDarkMode = useIsDarkMode();
+
   return (
-    <div className={cn(styles.featureList, { [className]: !!className })}>
+    <div className={cn(styles.featureList, { [className]: !!className, [styles.dark]: isDarkMode })}>
       {data.map((item) => (
         <div className={cn(styles.featureItem, { [styles.reverse]: item.reverse })} key={item.title}>
-          <div className={styles.contentItem}>
-            <img className={styles.image} src={item.imgSrc} alt={item.title} />
+          <div className={cn(styles.contentItem, { [styles.panToTheRight]: item.reverse && item.panRightContentItem })}>
+            {item.imgSrc && (
+              <img className={styles.image} src={item.imgSrc} alt={item.title} />
+            )}
           </div>
-          <div className={styles.contentItem}>
+          <div className={cn(styles.contentItem, { [styles.panToTheRight]: !item.reverse && item.panRightContentItem })} data-right-content-item>
             {item.comingSoon && (
               <ComingSoon className={styles.comingSoon} />
             )}
             <div className={styles.title}>{item.title}</div>
             <div className={styles.subtitle}>{item.subtitle}</div>
-            <ul className={styles.keyPoints}>
-              {item.keyPoints.map((point) => (
-                <li key={point}>{point}</li>
-              ))}
-            </ul>
-            {!item.comingSoon && (
+
+            <KeyPoints keyPoints={item.keyPoints} />
+
+            {!item.comingSoon && !item.callToActionInput && (
               <NextLink href={item.buttonUrl || '/'}>
-                <Button arrowRight>Find Out More</Button>
+                <Button arrowRight onDark={isDarkMode}>{item.buttonLabel || 'Find Out More'}</Button>
               </NextLink>
+            )}
+            {item.callToActionInput && (
+              <CallToActionInput />
             )}
           </div>
         </div>

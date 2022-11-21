@@ -1,6 +1,14 @@
 @import '@arcanetechnology/react-ui-lib/lib/vars.scss';
 
 .topBar {
+  &.dark {
+    background-color: #2C2C2E;
+
+    .subline {
+      background-color: #1C1C1E;
+    }
+  }
+
   .main {
     display: flex;
     align-items: center;

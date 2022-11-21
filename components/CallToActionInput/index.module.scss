@@ -9,6 +9,22 @@
   overflow: hidden;
   pointer-events: none;
 
+  &.dark {
+    background: #2C2C2E;
+    border: 1px solid #D1D1D6;
+
+    .emailWrapper {
+      input {
+        background: #2C2C2E;
+        color: rgba(249, 249, 253, 0.7);
+
+        &::placeholder {
+          color: rgba(249, 249, 253, 0.7);
+        }
+      }
+    }
+  }
+
   @media (max-width: $mobile-width) {
     height: 44px;
   }

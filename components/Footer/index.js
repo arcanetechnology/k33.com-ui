@@ -1,6 +1,7 @@
 import cn from 'classnames';
 import Logo from 'components/Logo';
 import NextLink from 'components/NextLink';
+import useIsDarkMode from 'hooks/useIsDarkMode';
 import { useRouter } from 'next/router';
 import Heart from 'svg/Heart';
 import config from './footer-config';
@@ -8,9 +9,10 @@ import styles from './index.module.scss';
 
 export default function Footer() {
   const { pathname } = useRouter();
+  const isDarkMode = useIsDarkMode();
 
   return (
-    <footer className={styles.footer}>
+    <footer className={cn(styles.footer, { [styles.dark]: isDarkMode })}>
       <div className={styles.mainPart}>
         <div className={styles.logoWrapper}>
           <Logo className={styles.logo} />
@@ -34,7 +36,7 @@ export default function Footer() {
 
       <div className={styles.copywright}>
         <p>© All rights reserved to K33</p>
-        <p>Made with <Heart /> in Oslo, Norway</p>
+        <p>Made with <Heart dark={isDarkMode} /> in Oslo, Norway</p>
       </div>
     </footer>
   );

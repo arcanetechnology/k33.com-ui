@@ -4,6 +4,44 @@
   margin-top: 120px;
   background-color: #F9F9F9;
 
+  &.dark {
+    background-color: #2C2C2E;
+
+    .mainPart {
+      .menuList {
+        .menu {
+          .title {
+            color: #FFFFFF;
+          }
+
+          .list {
+            li > a {
+              color: rgba(235, 235, 245, 0.3);
+
+              &:hover {
+                color: rgba(235, 235, 245, 0.7);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .copywright {
+      color: rgba(235, 235, 245, 0.3);
+
+      > p {
+        display: flex;
+
+        &:first-child {
+          &::after {
+            background-color: rgba(235, 235, 245, 0.3);
+          }
+        }
+      }
+    }
+  }
+
   .mainPart {
     display: flex;
 
@@ -56,14 +94,14 @@
       }
 
       .menu {
-        .list {
-          .title {
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 24px;
-            color: #343A40;
-          }
+        .title {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: #343A40;
+        }
 
+        .list {
           li > a {
             display: block;
             height: 30px;

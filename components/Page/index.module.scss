@@ -1,15 +1,23 @@
 @import '@arcanetechnology/react-ui-lib/lib/vars.scss';
 
-.page {
-  box-sizing: border-box;
-  margin: 0 auto;
-  max-width: 1728px;
+.wrapper {
+  width: 100%;
 
-  .children {
-    padding: 0 120px;
+  &.dark {
+    background: #1c1c1e;
+  }
 
-    @media (max-width: $mobile-width) {
-      padding: 0 24px;
+  .page {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1728px;
+
+    .children {
+      padding: 0 120px;
+
+      @media (max-width: $mobile-width) {
+        padding: 0 24px;
+      }
     }
   }
 }

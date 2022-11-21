@@ -1,9 +1,12 @@
 import { Button } from '@arcanetechnology/react-ui-lib';
 import cn from 'classnames';
+import useIsDarkMode from 'hooks/useIsDarkMode';
 import { useState } from 'react';
 import styles from './index.module.scss';
 
 export default function CallToActionInput({ className }) {
+  const isDarkMode = useIsDarkMode();
+
   const [email, setEmail] = useState('');
   const [isSending, setIsSending] = useState(false);
 
@@ -35,7 +38,7 @@ export default function CallToActionInput({ className }) {
   };
 
   return (
-    <div className={cn(styles.inputWrapper, { [className]: !!className })}>
+    <div className={cn(styles.inputWrapper, { [className]: !!className, [styles.dark]: isDarkMode })}>
       <div className={styles.emailWrapper}>
         <input
           type="email"
@@ -46,7 +49,7 @@ export default function CallToActionInput({ className }) {
         />
       </div>
 
-      <Button onClick={sendEmail} disabled={isSending}>
+      <Button onClick={sendEmail} disabled={isSending} onDark={isDarkMode}>
         Get Early Access
       </Button>
     </div>

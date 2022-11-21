@@ -35,6 +35,29 @@ const __text__ = {
       'Links to original sources',
       'Coverage across web, Twitter, Discord and Telegram'
     ]
+  },
+
+  PRODUCT_TEXT: 'Choose a plan that’s right for you',
+
+  PLAN_FREE: {
+    title: 'Free',
+    subtitle: 'Access to our Quick Takes and free Reports',
+    keyPoints: [
+      'Follow the market with our Quick Takes',
+      'Restricted access to certain free Reports'
+    ]
+  },
+
+  PLAN_PROFESSIONAL: {
+    title: 'Professional',
+    subtitle: 'Access to Quick Takes, all Reports, and 1-1s with analysts',
+    keyPoints: [
+      'All our reports delivered to your inbox',
+      'Monthly webinars',
+      'Access to our valuation models',
+      'Book a call 1-1 with our analysts',
+      'Complete access to our research archive'
+    ]
   }
 };
 

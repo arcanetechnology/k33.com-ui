@@ -21,6 +21,10 @@ export default function PlanList({ data }) {
               <li key={keyPoint}>{keyPoint}</li>
             ))}
           </ul>
+
+          {item.button && (
+            <div className={styles.disabledButton}>{item.button}</div>
+          )}
         </div>
       ))}
     </section>

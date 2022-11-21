@@ -1,6 +1,7 @@
 import FeatureList from 'components/FeatureList';
 import HeroTopSection from 'components/HeroTopSection';
 import Page from 'components/Page';
+import PlanList from 'components/PlanList';
 import Image from 'next/image';
 import __text__ from 'text/research';
 import styles from './index.module.scss';
@@ -39,6 +40,23 @@ export default function ResearchPage() {
             imgSrc: '/Friday-Focus.png',
             buttonUrl: '/research/reports/fridayfocus',
             ...__text__.THE_FRIDAY_FOCUS,
+          }
+        ]}
+      />
+
+      <div className={styles.productText}>{__text__.PRODUCT_TEXT}</div>
+
+      <PlanList
+        data={[
+          {
+            image: <Image src="/plan-free.png" width={113} height={138} alt="Free" />,
+            ...__text__.PLAN_FREE,
+            button: 'Free'
+          },
+          {
+            image: <Image src="/plan-professional.png" width={148} height={137} alt="Professional" />,
+            ...__text__.PLAN_PROFESSIONAL,
+            button: '$50 per month'
           }
         ]}
       />

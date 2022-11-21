@@ -3,6 +3,7 @@
 
 .planList {
   display: flex;
+  align-items: flex-start;
   justify-content: center;
   gap: 88px;
   margin-top: 88px;
@@ -67,7 +68,7 @@
         margin-top: 32px;
       }
 
-      > li {
+      >li {
         padding-bottom: 24px;
         padding-left: 45px;
         font-weight: 400;
@@ -82,6 +83,20 @@
           padding-bottom: 0px;
         }
       }
+    }
+
+    .disabledButton {
+      margin-top: 24px;
+      padding: 8px 0;
+      border: 2px solid #AEAEB2;
+      border-radius: 16px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: #AEAEB2;
+      pointer-events: none;
+      cursor: default;
     }
   }
 }

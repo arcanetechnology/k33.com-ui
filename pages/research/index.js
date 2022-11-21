@@ -1,7 +1,9 @@
+import CallToActionInput from 'components/CallToActionInput';
 import FeatureList from 'components/FeatureList';
 import HeroTopSection from 'components/HeroTopSection';
 import Page from 'components/Page';
 import PlanList from 'components/PlanList';
+import SectionTitle from 'components/SectionTitle';
 import Image from 'next/image';
 import __text__ from 'text/research';
 import styles from './index.module.scss';
@@ -17,7 +19,7 @@ export default function ResearchPage() {
       />
 
       <section className={styles.quoteSection}>
-        <Image src="/quote.png" width={42} height={34} />
+        <Image src="/quote.png" width={42} height={34} alt="Quote" />
         <div className={styles.header}>{__text__.OUR_PHILOSOPHY_HEADER}</div>
         <div className={styles.text}>{__text__.OUR_PHILOSOPHY_TEXT}</div>
       </section>
@@ -44,7 +46,7 @@ export default function ResearchPage() {
         ]}
       />
 
-      <div className={styles.productText}>{__text__.PRODUCT_TEXT}</div>
+      <SectionTitle className={styles.productText} text={__text__.PRODUCT_TEXT} />
 
       <PlanList
         data={[
@@ -60,6 +62,12 @@ export default function ResearchPage() {
           }
         ]}
       />
+
+      <section className={styles.bottomSection}>
+        <SectionTitle text={__text__.EARLY_ACCESS_TEXT} />
+        <div className={styles.earlyAccessSignUpText}>{__text__.EARLY_ACCESS_SIGN_UP}</div>
+        <CallToActionInput className={styles.input} />
+      </section>
     </Page>
   );
 }

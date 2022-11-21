@@ -38,15 +38,31 @@
 .productText {
   margin: 120px auto 0 auto;
   max-width: 566px;
-  font-weight: 600;
-  font-size: 40px;
-  line-height: 48px;
-  text-align: center;
-  color: #090A0B;
+}
 
-  @media (max-width: $mobile-width) {
+.productText {
+  margin: 120px auto 0 auto;
+  max-width: 566px;
+}
+
+.bottomSection {
+  margin: 120px auto 0 auto;
+  max-width: 727px;
+
+  .earlyAccessSignUpText {
+    margin-top: 16px;
     font-weight: 500;
     font-size: 24px;
     line-height: 32px;
+    text-align: center;
+    color: #2D3339;
+
+    @media (max-width: $mobile-width) {
+      color: #6C757D;
+    }
+  }
+
+  .input {
+    margin-top: 48px;
   }
 }

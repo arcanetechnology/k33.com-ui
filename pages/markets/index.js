@@ -1,6 +1,7 @@
 import HeroTopSection from 'components/HeroTopSection';
 import Page from 'components/Page';
 import PlanList from 'components/PlanList';
+import SectionTitle from 'components/SectionTitle';
 import Image from 'next/image';
 import __text__ from 'text/markets';
 import styles from './index.module.scss';
@@ -16,7 +17,7 @@ export default function MarketsPage() {
         rightImage={<Image src="/markets-right-bg.png" width={238} height={634} alt="" />}
       />
 
-      <div className={styles.productText}>{__text__.PRODUCT_TEXT}</div>
+      <SectionTitle className={styles.productText} text={__text__.PRODUCT_TEXT} />
 
       <PlanList
         data={[

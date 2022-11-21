@@ -1,21 +1,43 @@
 const mail = require('@sendgrid/mail');
+const client = require('@sendgrid/client');
 
 mail.setApiKey(process.env.SENDGRID_API_KEY);
+client.setApiKey(process.env.SENDGRID_API_KEY);
 
 const TEMPLATE_ID = 'd-858c5869ffea4d9a9ecf3129c1548c11';
 const FROM_EMAIL = 'welcome@k33.com';
 
+/**
+ * Saves the given email in Sendgrid and sends an email.
+ */
 export default async function handler(req, res) {
-  try {
-    const body = JSON.parse(req.body);
+  const { email } = JSON.parse(req.body);
 
-    const response = await mail.send({
+  const { response: sendMailResponse, error: sendMailError } = await sendMail({ email, res });
+  const { response: saveContactResponse, error: saveContactError } = await saveContact({ email, res });
+
+  res.status(sendMailError || saveContactError ? 500 : 200).json({
+    status: sendMailError || saveContactError ? 'Error' : 'OK',
+    responses: {
+      saveContact: saveContactResponse,
+      sendMail: sendMailResponse
+    },
+    errors: {
+      saveContact: saveContactError,
+      sendMail: sendMailError
+    }
+  });
+}
+
+const sendMail = async ({ email }) => {
+  try {
+    const [response] = await mail.send({
       from: FROM_EMAIL,
       personalizations: [
         {
           to: [
             {
-              email: body.email
+              email
             }
           ],
           dynamic_template_data: {
@@ -27,14 +49,31 @@ export default async function handler(req, res) {
       template_id: TEMPLATE_ID
     });
 
-    res.status(200).json({
-      status: 'OK',
-      response
-    });
-  } catch (e) {
-    res.status(500).json({
-      status: 'Error',
-      error: e
-    });
+    return { response };
+  } catch (error) {
+    return { error };
   }
-}
+};
+
+const saveContact = async ({ email }) => {
+  const data = {
+    contacts: [
+      {
+        email
+      }
+    ]
+  };
+
+  const request = {
+    url: '/v3/marketing/contacts',
+    method: 'PUT',
+    body: data
+  };
+
+  try {
+    const [response] = await client.request(request);
+    return { response };
+  } catch (error) {
+    return { error };
+  }
+};

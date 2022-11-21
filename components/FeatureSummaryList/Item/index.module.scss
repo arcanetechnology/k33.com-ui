@@ -61,9 +61,13 @@
       max-width: 314px;
     }
 
-    .link:hover {
-      .title {
-        text-decoration: underline;
+    .link {
+      text-align: center;
+
+      &:hover {
+        .title {
+          text-decoration: underline;
+        }
       }
     }
 

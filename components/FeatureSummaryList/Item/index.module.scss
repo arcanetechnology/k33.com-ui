@@ -62,8 +62,12 @@
     }
 
     .link {
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
+    a.link {
       &:hover {
         .title {
           text-decoration: underline;

@@ -13,10 +13,10 @@ export default function Item({ small, imageSrc, imageWidth, imageHeight, title, 
             <div className={styles.title}>{title}</div>
           </NextLink>
         ) : (
-          <>
+          <div className={styles.link}>
             <Image src={imageSrc} alt={title} width={imageWidth} height={imageHeight} />
             <div className={styles.title}>{title}</div>
-          </>
+          </div>
         )}
         <div className={styles.text}>{text}</div>
       </div>

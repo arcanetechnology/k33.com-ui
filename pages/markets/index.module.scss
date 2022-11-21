@@ -1,9 +1,31 @@
 @import '@arcanetechnology/react-ui-lib/lib/vars.scss';
+@import 'app-vars.scss';
 
 .heroSection {
   margin-top: 16px;
 
   @media (max-width: $mobile-width) {
     margin-top: 0px;
+  }
+}
+
+.productText {
+  margin: 0 auto;
+  max-width: 566px;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: #090A0B;
+
+  @media (max-width: $app-break-point) {
+    margin-top: 150px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 88px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
   }
 }

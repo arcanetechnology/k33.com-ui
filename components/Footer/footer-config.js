@@ -34,7 +34,7 @@ const config = [
     list: [
       {
         label: 'About',
-        url: '#'
+        url: '/about'
       }
     ]
   }

@@ -22,7 +22,9 @@ export default function Footer() {
               <div className={styles.title}>{menu.title}</div>
               <ul className={styles.list}>
                 {menu.list.map((item) => (
-                  <li key={item.label}><NextLink href={item.url} className={cn({ [styles.active]: pathname === item.url })}>{item.label}</NextLink></li>
+                  <li key={item.label}>
+                    <NextLink href={item.url} className={cn({ [styles.active]: pathname === item.url })} disabled={item.url === '#'}>{item.label}</NextLink>
+                  </li>
                 ))}
               </ul>
             </div>

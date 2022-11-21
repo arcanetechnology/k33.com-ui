@@ -77,6 +77,10 @@
               color: rgba(52, 58, 64, 0.7);
               text-decoration: underline;
             }
+
+            &[disabled] {
+              pointer-events: none;
+            }
           }
         }
       }

@@ -13,7 +13,7 @@ export default function ResearchPage() {
   return (
     <Page subLogo={{ image: '/research-logo.png' }}>
       <Head>
-        <title>Research | k33.com</title>
+        <title>Research | K33</title>
       </Head>
 
       <HeroTopSection

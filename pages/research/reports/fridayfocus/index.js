@@ -10,7 +10,7 @@ export default function FridayFocusPage() {
   return (
     <Page dark subLogo={{ image: '/research-logo-dark.png' }}>
       <Head>
-        <title>The Friday Focus | k33.com</title>
+        <title>The Friday Focus | K33</title>
       </Head>
 
       <ReportPageHeader

@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <Page>
       <Head>
-        <title>About | k33.com</title>
+        <title>About | K33</title>
       </Head>
 
       <HeroTopSection

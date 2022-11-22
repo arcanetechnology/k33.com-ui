@@ -10,7 +10,7 @@ export default function AheadOfTheCurvePage() {
   return (
     <Page dark subLogo={{ image: '/research-logo-dark.png' }}>
       <Head>
-        <title>Ahead of the curve | k33.com</title>
+        <title>Ahead of the curve | K33</title>
       </Head>
 
       <ReportPageHeader

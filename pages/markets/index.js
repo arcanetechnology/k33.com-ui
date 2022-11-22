@@ -11,7 +11,7 @@ export default function MarketsPage() {
   return (
     <Page subLogo={{ image: '/markets-logo.png' }}>
       <Head>
-        <title>Markets | k33.com</title>
+        <title>Markets | K33</title>
       </Head>
 
       <HeroTopSection

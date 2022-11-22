@@ -15,7 +15,7 @@ const __text__ = {
   },
 
   GET_ACCESS: {
-    title: 'Get access for $50 per month',
+    title: <><p>Get access for</p> <p>$50 per month</p></>,
     subtitle: 'What you get in our Professional plan.',
     keyPoints: [
       'All our reports delivered to your inbox',

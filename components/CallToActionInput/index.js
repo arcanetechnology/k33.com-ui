@@ -89,7 +89,7 @@ export default function CallToActionInput({ className }) {
         <div className={styles.errorMessage}>{emailError}</div>
       )}
 
-      <SuccessMessage isVisible={true || isSuccessMessageVisible} />
+      <SuccessMessage isVisible={isSuccessMessageVisible} />
     </div>
   );
 }

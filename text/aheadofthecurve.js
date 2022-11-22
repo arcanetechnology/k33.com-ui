@@ -1,6 +1,9 @@
 /* eslint-disable max-len */
 const __text__ = {
 
+  TITLE: <><strong>Ahead</strong> of the curve</>,
+  SUBTITLE: 'Understand what’s moving the digital asset market',
+
   REPORT: {
     title: 'Our weekly digital assets market report. Delivered directly to your inbox.',
     keyPoints: [

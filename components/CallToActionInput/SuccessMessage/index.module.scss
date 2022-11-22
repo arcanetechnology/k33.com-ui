@@ -1,0 +1,79 @@
+@import '@arcanetechnology/react-ui-lib/lib/vars.scss';
+
+.successMessage {
+  position: absolute;
+  top: 96px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 32px 92px 32px 48px;
+  min-width: 471px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 8px rgba(58, 58, 60, 0.25);
+  border-radius: 32px;
+  z-index: 2;
+
+  left: -999px;
+  opacity: 0;
+  transform: scale(0.001);
+  transition: left 0.3s;
+
+  &.visible {
+    left: 0px;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &.dark {
+    background-color: #2C2C2E;
+    box-shadow: 0px 0px 8px rgba(58, 58, 60, 0.75);
+
+    .header .text {
+      color: rgba(249, 249, 253, 0.7);
+    }
+
+    .message {
+      color: rgba(249, 249, 253, 0.7);
+      font-weight: 300;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 56px;
+    padding: 16px 24px 16px 24px;
+    min-width: 308px;
+    border-radius: 24px;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+
+    .text {
+      margin-left: 16px;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 40px;
+      color: #343A40;
+
+      @media (max-width: $mobile-width) {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  .message {
+    margin-top: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(52, 58, 64, 0.7);
+
+    @media (max-width: $mobile-width) {
+      margin-top: 4px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}

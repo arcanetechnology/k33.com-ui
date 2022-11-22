@@ -4,7 +4,7 @@ const client = require('@sendgrid/client');
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 client.setApiKey(process.env.SENDGRID_API_KEY);
 
-const TEMPLATE_ID = 'd-858c5869ffea4d9a9ecf3129c1548c11';
+const TEMPLATE_ID = 'd-f75ad0c562f042f48951a758445ac4d5';
 const FROM_EMAIL = 'welcome@k33.com';
 
 /**

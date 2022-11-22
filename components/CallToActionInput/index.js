@@ -1,30 +1,60 @@
 import { Button } from '@arcanetechnology/react-ui-lib';
 import cn from 'classnames';
 import useIsDarkMode from 'hooks/useIsDarkMode';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './index.module.scss';
+import SuccessMessage from './SuccessMessage';
+
+const INVALID_EMAIL_MESSAGE = 'Enter a valid email.';
+const UNEXPECTED_ERROR = 'Unexpected error occured. Please try again later.';
+
+const SUCCESS_MESSAGE_INTERVAL = 5000;
 
 export default function CallToActionInput({ className }) {
   const isDarkMode = useIsDarkMode();
 
   const [email, setEmail] = useState('');
   const [isSending, setIsSending] = useState(false);
+  const [emailError, setEmailError] = useState();
+
+  const [isSuccessMessageVisible, setIsSuccessMessageVisible] = useState(false);
+
+  useEffect(() => {
+    if (isSuccessMessageVisible) {
+      setTimeout(() => {
+        setIsSuccessMessageVisible(false);
+      }, SUCCESS_MESSAGE_INTERVAL);
+    }
+  }, [isSuccessMessageVisible]);
+
+  useEffect(() => {
+    setEmailError(null);
+  }, [email]);
 
   const sendEmail = async () => {
+    if (!isValidEmail(email)) {
+      setEmailError(INVALID_EMAIL_MESSAGE);
+      return;
+    }
+
     setIsSending(true);
 
-    const result = await fetch('/api/mail', {
-      method: 'POST',
-      body: JSON.stringify({
-        email
-      })
-    });
+    try {
+      const result = await fetch('/api/mail', {
+        method: 'POST',
+        body: JSON.stringify({
+          email
+        })
+      });
 
-    if (result.status !== 200) {
-      alert('error');
-    } else {
-      alert('success');
-      setEmail('');
+      if (result.status !== 200) {
+        setEmailError(UNEXPECTED_ERROR);
+      } else {
+        setIsSuccessMessageVisible(true);
+        setEmail('');
+      }
+    } catch (e) {
+      setEmailError(UNEXPECTED_ERROR);
     }
 
     setIsSending(false);
@@ -38,20 +68,32 @@ export default function CallToActionInput({ className }) {
   };
 
   return (
-    <div className={cn(styles.inputWrapper, { [className]: !!className, [styles.dark]: isDarkMode })}>
-      <div className={styles.emailWrapper}>
-        <input
-          type="email"
-          placeholder="Enter your email"
-          value={email}
-          onChange={(e) => { setEmail(e.target.value); }}
-          onKeyDown={handleKey}
-        />
+    <div className={cn(styles.wrapper, { [className]: !!className })}>
+      <div className={cn(styles.inputWrapper, { [styles.dark]: isDarkMode, [styles.error]: !!emailError })}>
+        <div className={styles.emailWrapper}>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => { setEmail(e.target.value); }}
+            onKeyDown={handleKey}
+          />
+        </div>
+
+        <Button onClick={sendEmail} disabled={isSending} onDark={isDarkMode}>
+          Get Early Access
+        </Button>
       </div>
 
-      <Button onClick={sendEmail} disabled={isSending} onDark={isDarkMode}>
-        Get Early Access
-      </Button>
+      {emailError && (
+        <div className={styles.errorMessage}>{emailError}</div>
+      )}
+
+      <SuccessMessage isVisible={isSuccessMessageVisible} />
     </div>
   );
 }
+
+export const isValidEmail = (email) => (
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+);

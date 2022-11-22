@@ -1,0 +1,33 @@
+@import '@arcanetechnology/react-ui-lib/lib/vars.scss';
+@import 'app-vars.scss';
+
+.reportPageReportSection {
+  display: flex;
+  gap: 80px;
+  margin-top: 105px;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 88px;
+  }
+
+  .title {
+    flex: 4;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 80px;
+    color: #FFFFFF;
+
+    @media (max-width: $app-break-point) {
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 56px;
+      opacity: 0.8;
+    }
+  }
+
+  .keyPointsWrapper {
+    flex: 3;
+  }
+}

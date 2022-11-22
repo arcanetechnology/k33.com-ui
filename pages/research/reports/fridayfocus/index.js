@@ -2,10 +2,10 @@ import FeatureList from 'components/FeatureList';
 import Page from 'components/Page';
 import ReportPageHeader from 'components/ReportPageHeader';
 import ReportPageReportSection from 'components/ReportPageReportSection';
-import __text__ from 'text/aheadofthecurve';
+import __text__ from 'text/fridayfocus';
 import styles from './index.module.scss';
 
-export default function AheadOfTheCurvePage() {
+export default function FridayFocusPage() {
   return (
     <Page dark subLogo={{ image: '/research-logo-dark.png' }}>
       <ReportPageHeader
@@ -29,7 +29,7 @@ export default function AheadOfTheCurvePage() {
             reverse: true,
             callToActionInput: true,
             panRightContentItem: true,
-            imgSrc: '/lof-ahead-the-curve-landing-page.png',
+            imgSrc: '/lof-friday-focus-landing-page.png',
             ...__text__.GET_ACCESS
           }
         ]}

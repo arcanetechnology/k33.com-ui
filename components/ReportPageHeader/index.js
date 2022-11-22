@@ -1,11 +1,12 @@
+import cn from 'classnames';
 import styles from './index.module.scss';
 
-export default function ReportPageHeader({ title, subtitle }) {
+export default function ReportPageHeader({ sectionClassName, contentClassName, titleClassName, subtitleClassName, title, subtitle }) {
   return (
-    <section className={styles.reportPageHeader}>
-      <div className={styles.content}>
-        <div className={styles.title}>{title}</div>
-        <div className={styles.subtitle}>{subtitle}</div>
+    <section className={cn(styles.reportPageHeader, { [sectionClassName]: !!sectionClassName })}>
+      <div className={cn(styles.content, { [contentClassName]: !!contentClassName })}>
+        <div className={cn(styles.title, { [titleClassName]: !!titleClassName })}>{title}</div>
+        <div className={cn(styles.subtitle, { [subtitleClassName]: !!subtitleClassName })}>{subtitle}</div>
       </div>
     </section>
   );

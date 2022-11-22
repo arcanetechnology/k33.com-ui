@@ -2,26 +2,35 @@
 @import 'app-vars.scss';
 
 .header {
-  padding: 130px 0 0 120px;
-  background-image: url(/ahead-the-curve-report-header.png);
-  background-position: top right;
+  padding: 116px 0 0 149px;
+  background-image: url(/the-friday-focus-header.png);
+  background-position: top left;
 
   @media (max-width: $mobile-width) {
-    padding: 92px 0 0 24px;
-    background-image: url(/ahead-the-curve-report-header-mobile.png);
+    padding: 64px 0 0 73px;
+  }
+
+  @media (max-width: 525px) {
+    background-image: url(/the-friday-focus-header-mobile.png);
+  }
+
+  @media (max-width: 600px) {
+    background-position: top left;
+    background-repeat: no-repeat;
   }
 
   .content {
-    .title {
-      font-weight: 300;
-      font-size: 80px;
-      line-height: 97px;
-      color: #FFFFFF;
+    max-width: 340px;
 
-      @media (max-width: $app-break-point) {
-        font-size: 6.15vw;
-        line-height: 7.46vw;
-      }
+    @media (max-width: $mobile-width) {
+      max-width: 130px;
+    }
+
+    .title {
+      font-weight: 700;
+      font-size: 80px;
+      line-height: 90px;
+      color: #FFFFFF;
 
       @media (max-width: $mobile-width) {
         font-size: 32px;
@@ -37,12 +46,6 @@
       font-weight: 500;
       font-size: 24px;
       line-height: 32px;
-      color: #FFFFFF;
-
-      @media (max-width: $app-break-point) {
-        font-size: 1.84vw;
-        line-height: 2.46vw;
-      }
 
       @media (max-width: $mobile-width) {
         margin-top: 8px;

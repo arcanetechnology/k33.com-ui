@@ -4,58 +4,22 @@
 .reportPageHeader {
   box-sizing: border-box;
   margin: 0 -120px;
-  padding: 130px 0 0 120px;
   height: 560px;
-  background: url(/ahead-the-curve-report-header.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top right;
 
   @media (max-width: $mobile-width) {
     margin: 0 -24px;
-    padding: 92px 0 0 24px;
     height: 300px;
-    background-image: url(/ahead-the-curve-report-header-mobile.png);
   }
 
   .content {
     .title {
-      font-weight: 300;
-      font-size: 80px;
-      line-height: 97px;
       color: #FFFFFF;
-
-      @media (max-width: $app-break-point) {
-        font-size: 6.15vw;
-        line-height: 7.46vw;
-      }
-
-      @media (max-width: $mobile-width) {
-        font-size: 32px;
-        line-height: 39px;
-      }
-
-      > strong {
-        font-weight: 600;
-      }
     }
 
     .subtitle {
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 32px;
       color: #FFFFFF;
-
-      @media (max-width: $app-break-point) {
-        font-size: 1.84vw;
-        line-height: 2.46vw;
-      }
-
-      @media (max-width: $mobile-width) {
-        margin-top: 8px;
-        font-size: 13px;
-        line-height: 20px;
-      }
     }
   }
 }

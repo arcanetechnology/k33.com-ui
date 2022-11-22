@@ -8,7 +8,7 @@ export default function ReportPageReportSection({ title, keyPoints }) {
       <div className={styles.title}>{title}</div>
       <div className={styles.keyPointsWrapper}>
         <KeyPoints keyPoints={keyPoints} />
-        <Button onDark>Download Sample Report</Button>
+        <Button onDark className={styles.button}>Download Sample Report</Button>
       </div>
     </section>
   );

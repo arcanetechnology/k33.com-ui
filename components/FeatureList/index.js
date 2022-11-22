@@ -48,7 +48,7 @@ export default function FeatureList({ data, className }) {
               </NextLink>
             )}
             {item.callToActionInput && (
-              <CallToActionInput />
+              <CallToActionInput className={styles.input} />
             )}
           </div>
         </div>

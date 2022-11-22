@@ -60,7 +60,7 @@ const __text__ = {
     ]
   },
 
-  EARLY_ACCESS_TEXT: 'Do you want to get early access our research reports for free?',
+  EARLY_ACCESS_TEXT: 'Do you want to get early access to all our research reports for free?',
   EARLY_ACCESS_SIGN_UP: 'Sign up now'
 };
 

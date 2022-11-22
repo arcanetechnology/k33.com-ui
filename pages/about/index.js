@@ -30,7 +30,7 @@ export default function AboutPage() {
         </div>
 
         <div className={styles.imageWrapper}>
-          <Image src="/AboutUs.png" alt="The Team" width={636} height={737} />
+          <Image src="/AboutUs.png" alt="The Team" width={636} height={763} />
         </div>
       </section>
     </Page>

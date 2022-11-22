@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:title" key="og:title" content="K33" />
         <meta property="og:description" key="og:description" content="Safe. Secure. Digital Assets." />
         <meta name="description" content="Safe. Secure. Digital Assets." />
-        <meta property="og:image" key="og:image" content="https://k33.com/Arcane-Landing-Page.png" />
+        <meta property="og:image" key="og:image" content="https://www.k33.com/Arcane-Landing-Page.png" />
         <meta property="og:url" key="og:url" content="https://k33.com" />
 
         <meta property="twitter:card" key="twitter:card" content="summary_large_image" />

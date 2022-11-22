@@ -25,6 +25,7 @@ export default function AheadOfTheCurvePage() {
       <ReportPageReportSection
         title={__text__.REPORT.title}
         keyPoints={__text__.REPORT.keyPoints}
+        downloadUrl="https://assets.ctfassets.net/4rilomtvvae4/7srVQ4mnjn4rTM7k0s6Awn/3c8192094e4cc1a4ac47a928ae6aaa38/Ahead_of_the_curve_-_Nov_22_2022.pdf"
       />
 
       <FeatureList

@@ -25,6 +25,7 @@ export default function FridayFocusPage() {
       <ReportPageReportSection
         title={__text__.REPORT.title}
         keyPoints={__text__.REPORT.keyPoints}
+        downloadUrl="https://arcane.no/research/the-friday-focus-issue-60"
       />
 
       <FeatureList

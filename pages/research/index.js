@@ -4,6 +4,7 @@ import HeroTopSection from 'components/HeroTopSection';
 import Page from 'components/Page';
 import PlanList from 'components/PlanList';
 import SectionTitle from 'components/SectionTitle';
+import Head from 'next/head';
 import Image from 'next/image';
 import __text__ from 'text/research';
 import styles from './index.module.scss';
@@ -11,6 +12,10 @@ import styles from './index.module.scss';
 export default function ResearchPage() {
   return (
     <Page subLogo={{ image: '/research-logo.png' }}>
+      <Head>
+        <title>Research | k33.com</title>
+      </Head>
+
       <HeroTopSection
         heroText={__text__.HERO}
         subText={__text__.HERO_SUBTEXT}

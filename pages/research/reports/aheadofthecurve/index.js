@@ -2,12 +2,17 @@ import FeatureList from 'components/FeatureList';
 import Page from 'components/Page';
 import ReportPageHeader from 'components/ReportPageHeader';
 import ReportPageReportSection from 'components/ReportPageReportSection';
+import Head from 'next/head';
 import __text__ from 'text/aheadofthecurve';
 import styles from './index.module.scss';
 
 export default function AheadOfTheCurvePage() {
   return (
     <Page dark subLogo={{ image: '/research-logo-dark.png' }}>
+      <Head>
+        <title>Ahead of the curve | k33.com</title>
+      </Head>
+
       <ReportPageHeader
         sectionClassName={styles.header}
         contentClassName={styles.content}

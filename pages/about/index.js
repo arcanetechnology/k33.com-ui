@@ -1,5 +1,6 @@
 import HeroTopSection from 'components/HeroTopSection';
 import Page from 'components/Page';
+import Head from 'next/head';
 import Image from 'next/image';
 import __text__ from 'text/about';
 import styles from './index.module.scss';
@@ -7,6 +8,10 @@ import styles from './index.module.scss';
 export default function AboutPage() {
   return (
     <Page>
+      <Head>
+        <title>About | k33.com</title>
+      </Head>
+
       <HeroTopSection
         oneLiner
         largerSubText

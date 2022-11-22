@@ -25,7 +25,7 @@ export default function Footer() {
               <ul className={styles.list}>
                 {menu.list.map((item) => (
                   <li key={item.label}>
-                    <NextLink href={item.url} className={cn({ [styles.active]: pathname === item.url })} disabled={item.url === '#'}>{item.label}</NextLink>
+                    <NextLink href={item.url} target={item.target || '_self'} className={cn({ [styles.active]: pathname === item.url })} disabled={item.url === '#'}>{item.label}</NextLink>
                   </li>
                 ))}
               </ul>

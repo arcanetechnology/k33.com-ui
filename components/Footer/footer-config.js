@@ -21,11 +21,13 @@ const config = [
     list: [
       {
         label: 'Twitter',
-        url: '#'
+        url: 'https://twitter.com/K33HQ',
+        target: '_blank'
       },
       {
         label: 'LinkedIn',
-        url: '#'
+        url: 'https://www.linkedin.com/company/k33',
+        target: '_blank'
       }
     ]
   },

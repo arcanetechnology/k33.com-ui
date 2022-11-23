@@ -21,6 +21,10 @@
 
       .emailWrapper {
         padding: 0 23px;
+
+        @media (max-width: $mobile-width) {
+          padding: 0 15px;
+        }
       }
     }
 

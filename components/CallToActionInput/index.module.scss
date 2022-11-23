@@ -5,6 +5,7 @@
 
   .inputWrapper {
     display: flex;
+    box-sizing: border-box;
     height: 80px;
     background: #FFFFFF;
     border: 1px solid #C7C7CC;
@@ -12,8 +13,15 @@
     overflow: hidden;
 
     &.error {
-      border: 1px solid #FF2D55;
-      outline: 1px solid #FF2D55;
+      border: 2px solid #FF2D55;
+
+      button {
+        margin: 7px 7px 0 0;
+      }
+
+      .emailWrapper {
+        padding: 0 23px;
+      }
     }
 
     &.dark {
@@ -21,8 +29,7 @@
       border: 1px solid #D1D1D6;
 
       &.error {
-        border: 1px solid #FF2D55;
-        outline: 1px solid #FF2D55;
+        border: 2px solid #FF2D55;
       }
 
       .emailWrapper {

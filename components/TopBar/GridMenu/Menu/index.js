@@ -14,7 +14,7 @@ const MENU_ITEMS = [
   {
     url: '/',
     icon: <K33 />,
-    label: 'Platform'
+    label: 'Home'
   },
   {
     url: '/research',

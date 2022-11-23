@@ -1,6 +1,8 @@
 @import '@arcanetechnology/react-ui-lib/lib/vars.scss';
 
 .topBar {
+  position: relative;
+
   &.dark {
     background-color: #2C2C2E;
 
@@ -30,6 +32,19 @@
       @media (max-width: $mobile-width) {
         width: 63px;
         height: 19px;
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+
+      .comingSoon {
+        margin-left: 24px;
+
+        @media (max-width: $mobile-width) {
+          margin-left: 8px;
+        }
       }
     }
   }

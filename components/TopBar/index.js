@@ -2,6 +2,7 @@ import cn from 'classnames';
 import ComingSoon from 'components/ComingSoon';
 import Logo from 'components/Logo';
 import useIsDarkMode from 'hooks/useIsDarkMode';
+import GridMenu from './GridMenu';
 import styles from './index.module.scss';
 
 export default function TopBar({ subLogo }) {
@@ -11,7 +12,11 @@ export default function TopBar({ subLogo }) {
     <div className={cn(styles.topBar, { [styles.dark]: isDarkMode })}>
       <div className={styles.main}>
         <Logo className={styles.logo} />
-        <ComingSoon />
+
+        <div className={styles.right}>
+          <GridMenu />
+          <ComingSoon className={styles.comingSoon} />
+        </div>
       </div>
 
       {subLogo && (

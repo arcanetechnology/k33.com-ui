@@ -1,0 +1,50 @@
+.appList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  cursor: default;
+
+  &.dark {
+    > li {
+      a {
+        color: rgba(249, 249, 253, 0.7);
+      }
+
+      &.active a {
+        color: rgba(249, 249, 253, 1);
+      }
+    }
+  }
+
+  > li {
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+
+    &.active {
+      a {
+        color: #343A40;
+      }
+    }
+
+    a {
+      display: block;
+      color: rgba(52, 58, 64, 0.3);
+
+      &[data-disabled=true] {
+        // pointer-events: none;
+        cursor: default;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

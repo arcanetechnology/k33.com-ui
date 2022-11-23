@@ -35,15 +35,8 @@ const sendMail = async ({ email }) => {
       from: FROM_EMAIL,
       personalizations: [
         {
-          to: [
-            {
-              email
-            }
-          ],
-          dynamic_template_data: {
-            name: 'Hello from K33!',
-            subject: 'New Message from K33!',
-          }
+          to: [{ email }],
+          dynamic_template_data: {}
         }
       ],
       template_id: TEMPLATE_ID
@@ -57,11 +50,7 @@ const sendMail = async ({ email }) => {
 
 const saveContact = async ({ email }) => {
   const data = {
-    contacts: [
-      {
-        email
-      }
-    ]
+    contacts: [{ email }]
   };
 
   const request = {

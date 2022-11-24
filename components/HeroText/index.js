@@ -11,7 +11,7 @@ export default function HeroText({ text, className }) {
   ), [text]);
 
   return (
-    <h1 className={cn(styles.heroText, { [className]: !!className })}>
+    <h1 className={cn(styles.heroText, { [className]: !!className })} data-testid="heroText">
       {lines.map((line) => (
         <p key={line}>{line}</p>
       ))}

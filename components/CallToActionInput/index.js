@@ -68,7 +68,7 @@ export default function CallToActionInput({ className }) {
   };
 
   return (
-    <div className={cn(styles.wrapper, { [className]: !!className })}>
+    <div className={cn(styles.wrapper, { [className]: !!className })} aria-label="email-input">
       <div className={cn(styles.inputWrapper, { [styles.dark]: isDarkMode, [styles.error]: !!emailError })}>
         <div className={styles.emailWrapper}>
           <input

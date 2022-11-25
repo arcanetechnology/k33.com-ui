@@ -9,6 +9,9 @@ const FROM_EMAIL = 'welcome@k33.com';
 
 /**
  * Saves the given email in Sendgrid and sends an email.
+ *
+ * @param req: { body: { email }}
+ * @param res
  */
 export default async function handler(req, res) {
   const { email } = JSON.parse(req.body);

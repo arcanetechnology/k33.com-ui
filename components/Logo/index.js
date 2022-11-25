@@ -3,6 +3,9 @@ import useIsDarkMode from 'hooks/useIsDarkMode';
 import { useMemo } from 'react';
 import styles from './index.module.scss';
 
+/**
+ * Represents the K33 logo.
+ */
 export default function Logo({ ...props }) {
   const isDarkMode = useIsDarkMode();
 

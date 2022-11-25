@@ -6,6 +6,9 @@ import Head from 'next/head';
 import __text__ from 'text/fridayfocus';
 import styles from './index.module.scss';
 
+/**
+ * Outlines the Friday Focus concept.
+ */
 export default function FridayFocusPage() {
   return (
     <Page dark subLogo={{ image: '/research-logo-dark.png' }}>

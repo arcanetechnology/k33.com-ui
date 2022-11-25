@@ -2,6 +2,13 @@ import { Button } from '@arcanetechnology/react-ui-lib';
 import KeyPoints from 'components/KeyPoints';
 import styles from './index.module.scss';
 
+/**
+ * Represents the top section of a report page.
+ *
+ * @param {String} title
+ * @param {Array} KeyPoints
+ * @param {String} downloadUrl
+ */
 export default function ReportPageReportSection({ title, keyPoints, downloadUrl }) {
   return (
     <section className={styles.reportPageReportSection}>

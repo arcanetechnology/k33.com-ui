@@ -1,3 +1,10 @@
+/**
+ * Gets a color scheme related to some icons based on the dark mode and active state.
+ *
+ * @param {Boolean} dark
+ * @param {Boolean} active
+ * @returns {Object} colorScheme: { fill, fillOpacity, textColor }
+ */
 export const getColorScheme = ({ dark, active }) => {
   const fill = dark
     ? active ? 'white' : 'white'

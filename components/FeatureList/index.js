@@ -8,6 +8,8 @@ import useIsDarkMode from 'hooks/useIsDarkMode';
 import styles from './index.module.scss';
 
 /**
+ * Represents a list of features. Data for the features is provided by the data array prop.
+ * Each feature item is usually represented by an image on the left and content on the right, with a title, subtitle, key points, and a button.
  *
  * @param {Array} data: Array of objects describing one feature:
  *                         - reverse: if true, content is on the left and image is on the right
@@ -19,7 +21,7 @@ import styles from './index.module.scss';
  *                         - buttonUrl
  *                         - callToActionInput: displays call to action input instead of a button
  *                         - panRightContentItem: pans the right content item to the endge of the page
- * @param {String} className
+ * @param {String} className: an additonal className for styling
  */
 export default function FeatureList({ data, className }) {
   const isDarkMode = useIsDarkMode();

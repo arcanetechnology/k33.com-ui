@@ -3,6 +3,8 @@ import cn from 'classnames';
 import styles from './index.module.scss';
 
 /**
+ * Encapsulates styles for a hero text.
+ *
  * @param {String | Array} text: could be either a single String or an Array of lines
  */
 export default function HeroText({ text, className }) {

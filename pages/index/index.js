@@ -7,6 +7,9 @@ import Image from 'next/image';
 import __text__ from 'text/home';
 import styles from './index.module.scss';
 
+/**
+ * Represents the home page of K33, describing the business model.
+ */
 export default function HomePage() {
   return (
     <Page>

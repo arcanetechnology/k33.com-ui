@@ -33,6 +33,12 @@ const MENU_ITEMS = [
   }
 ];
 
+/**
+ * Represents the Grid menu content, with various icons leading to different pages.
+ *
+ * @param {Boolean} isOpen
+ * @param {Function} onClose
+ */
 export default function Menu({ isOpen, onClose }) {
   const { pathname } = useRouter();
   const isDarkMode = useIsDarkMode();

@@ -3,6 +3,11 @@ import styles from './index.module.scss';
 import useIsDarkMode from 'hooks/useIsDarkMode';
 import Mailbox from 'svg/Mailbox';
 
+/**
+ * A success message component rendered when the application successfully sends an email to the user via the CallToActionInput.
+ *
+ * @param {Boolean} isVisible
+ */
 export default function SuccessMessage({ isVisible }) {
   const isDarkMode = useIsDarkMode();
 

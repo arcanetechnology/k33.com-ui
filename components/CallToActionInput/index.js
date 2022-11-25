@@ -10,6 +10,12 @@ const UNEXPECTED_ERROR = 'Unexpected error occured. Please try again later.';
 
 const SUCCESS_MESSAGE_INTERVAL = 5000;
 
+/**
+ * Represents a call to action email input with a submit button.
+ * An API is called when the user enters a valid email to send them an email and record data in Sendgrid.
+ *
+ * @param {String} className: an additonal className for styling
+ */
 export default function CallToActionInput({ className }) {
   const isDarkMode = useIsDarkMode();
 

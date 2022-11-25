@@ -6,6 +6,9 @@ import Head from 'next/head';
 import __text__ from 'text/aheadofthecurve';
 import styles from './index.module.scss';
 
+/**
+ * Outlines the Ahead of the Curve report.
+ */
 export default function AheadOfTheCurvePage() {
   return (
     <Page dark subLogo={{ image: '/research-logo-dark.png' }}>

@@ -5,7 +5,10 @@ import Menu from './Menu';
 import GridMenuIcon from 'svg/GridMenu';
 import useIsDarkMode from 'hooks/useIsDarkMode';
 
-export default function GridMenu({ activeItem }) {
+/**
+ * Represents the grid menu on the top bar. It contains various links to pages.
+ */
+export default function GridMenu() {
   const isDarkMode = useIsDarkMode();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -35,7 +38,6 @@ export default function GridMenu({ activeItem }) {
         <Menu
           isOpen={isMenuOpen}
           onClose={() => { setIsMenuOpen(false); }}
-          activeItem={activeItem}
         />
       </div>
     </div>

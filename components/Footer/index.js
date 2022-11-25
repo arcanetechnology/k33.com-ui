@@ -7,6 +7,9 @@ import Heart from 'svg/Heart';
 import config from './footer-config';
 import styles from './index.module.scss';
 
+/**
+ * Represents the app footer displayed on every page.
+ */
 export default function Footer() {
   const { pathname } = useRouter();
   const isDarkMode = useIsDarkMode();

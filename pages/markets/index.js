@@ -7,6 +7,9 @@ import Image from 'next/image';
 import __text__ from 'text/markets';
 import styles from './index.module.scss';
 
+/**
+ * Represents the Markets page containing a list of different products.
+ */
 export default function MarketsPage() {
   return (
     <Page subLogo={{ image: '/markets-logo.png' }}>

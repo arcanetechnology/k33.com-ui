@@ -1,4 +1,4 @@
-import { useClientSide } from 'hooks';
+import useClientSide from 'hooks/useClientSide';
 import ReactDOM from 'react-dom';
 
 /**

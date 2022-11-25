@@ -9,6 +9,9 @@ import Image from 'next/image';
 import __text__ from 'text/research';
 import styles from './index.module.scss';
 
+/**
+ * Represents the Research landing page outlining varous research projects.
+ */
 export default function ResearchPage() {
   return (
     <Page subLogo={{ image: '/research-logo.png' }}>

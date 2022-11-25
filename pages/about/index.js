@@ -5,6 +5,9 @@ import Image from 'next/image';
 import __text__ from 'text/about';
 import styles from './index.module.scss';
 
+/**
+ * Represents the about page containing short description of company goals and values.
+ */
 export default function AboutPage() {
   return (
     <Page>

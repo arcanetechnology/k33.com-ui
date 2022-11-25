@@ -1,6 +1,16 @@
 import ComingSoon from 'components/ComingSoon';
 import styles from './index.module.scss';
 
+/**
+ * Represents a list of plans or products.
+ *
+ * @param {Array} data: Array of objects describing one item:
+ *                        - image
+ *                        - title
+ *                        - subtitle
+ *                        - keyPoints
+ *                        - button
+ */
 export default function PlanList({ data }) {
   return (
     <section className={styles.planList}>

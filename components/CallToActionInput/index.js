@@ -6,7 +6,7 @@ import styles from './index.module.scss';
 import SuccessMessage from './SuccessMessage';
 
 const INVALID_EMAIL_MESSAGE = 'Enter a valid email.';
-const UNEXPECTED_ERROR = 'Unexpected error occured. Please try again later.';
+const UNEXPECTED_ERROR = 'Unexpected error occurred. Please try again later.';
 
 const SUCCESS_MESSAGE_INTERVAL = 5000;
 

@@ -4,6 +4,7 @@ const client = require('@sendgrid/client');
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 client.setApiKey(process.env.SENDGRID_API_KEY);
 
+const LIST_ID = 'd2e4dc82-5cd8-4cc9-ad84-131389919f91';
 const TEMPLATE_ID = 'd-f75ad0c562f042f48951a758445ac4d5';
 const FROM_EMAIL = 'welcome@k33.com';
 
@@ -53,7 +54,8 @@ const sendMail = async ({ email }) => {
 
 const saveContact = async ({ email }) => {
   const data = {
-    contacts: [{ email }]
+    contacts: [{ email }],
+    list_ids: [LIST_ID]
   };
 
   const request = {

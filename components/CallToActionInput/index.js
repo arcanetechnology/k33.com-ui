@@ -15,8 +15,9 @@ const SUCCESS_MESSAGE_INTERVAL = 5000;
  * An API is called when the user enters a valid email to send them an email and record data in Sendgrid.
  *
  * @param {String} className: an additonal className for styling
+ * @param {String} callToActionList: if provided, the email is added to a specific Sendgrid list
  */
-export default function CallToActionInput({ className }) {
+export default function CallToActionInput({ className, callToActionList }) {
   const isDarkMode = useIsDarkMode();
 
   const [email, setEmail] = useState('');
@@ -48,7 +49,10 @@ export default function CallToActionInput({ className }) {
     try {
       const result = await fetch('/api/mail', {
         method: 'POST',
-        body: JSON.stringify({
+        body: JSON.stringify(callToActionList ? {
+          email,
+          list: callToActionList
+        } : {
           email
         })
       });

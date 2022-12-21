@@ -20,6 +20,7 @@ import styles from './index.module.scss';
  *                         - keyPoints: Array of Strings, each representing a bullet point,
  *                         - buttonUrl
  *                         - callToActionInput: displays call to action input instead of a button
+ *                         - callToActionList: if provided, the email is added to a specific Sendgrid list
  *                         - panRightContentItem: pans the right content item to the endge of the page
  * @param {String} className: an additonal className for styling
  */
@@ -50,7 +51,7 @@ export default function FeatureList({ data, className }) {
               </NextLink>
             )}
             {item.callToActionInput && (
-              <CallToActionInput className={styles.input} />
+              <CallToActionInput className={styles.input} callToActionList={item.callToActionList} />
             )}
           </div>
         </div>

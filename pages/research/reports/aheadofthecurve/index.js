@@ -37,6 +37,7 @@ export default function AheadOfTheCurvePage() {
           {
             reverse: true,
             callToActionInput: true,
+            callToActionList: 'aheadOfTheCurve',
             panRightContentItem: true,
             imgSrc: '/lof-ahead-the-curve-landing-page.png',
             ...__text__.GET_ACCESS

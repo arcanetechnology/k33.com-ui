@@ -1,0 +1,150 @@
+@import '@arcanetechnology/react-ui-lib/lib/vars.scss';
+@import 'app-vars.scss';
+
+.contentSection {
+  margin-top: 70px;
+
+  .title {
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    color: #343A40;
+  }
+
+  .contentWrapper {
+    display: flex;
+    gap: 82px;
+
+    @media (max-width: $app-break-point) {
+      flex-direction: column;
+      gap: 44px;
+    }
+
+    .text {
+      flex: 1;
+
+      p {
+        margin-top: 32px;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 40px;
+        color: rgba(52, 58, 64, 0.7);
+
+        @media (max-width: $app-break-point) {
+          font-size: 24px;
+          line-height: 32px;
+        }
+
+        &:first-child {
+          margin-top: 0px;
+        }
+      }
+    }
+
+    .contacts {
+      @media (max-width: $app-break-point) {
+        justify-content: center;
+      }
+
+      .contactTitle {
+        margin-bottom: 24px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        color: #343A40;
+      }
+
+      .contactList {
+        > li {
+          display: flex;
+
+          &:first-child {
+            margin-bottom: 24px;
+          }
+
+          .image {
+            margin-right: 16px;
+            line-height: 0;
+
+            > img {
+              border-radius: 88px;
+            }
+          }
+
+          .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .name {
+              font-weight: 500;
+              font-size: 24px;
+              line-height: 32px;
+              color: #343A40;
+            }
+
+            .email {
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              color: rgba(52, 58, 64, 0.7);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    margin-top: 48px;
+
+    > button {
+      &:first-child {
+        margin-right: 24px;
+      }
+    }
+  }
+}
+
+.selectionSection {
+  margin-top: 128px;
+
+  .prevNext {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 16px;
+    margin-bottom: 88px;
+
+    .prevNextItem {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #090A0B;
+
+      .prevText {
+        margin-left: 8px;
+      }
+
+      .nextText {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .title {
+    margin-bottom: 80px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    color: #343A40;
+  }
+
+  .mainImage {
+    max-width: 100%;
+  }
+}

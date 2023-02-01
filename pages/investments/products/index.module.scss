@@ -10,6 +10,12 @@
     font-size: 40px;
     line-height: 48px;
     color: #343A40;
+
+    @media (max-width: $app-break-point) {
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 40px;
+    }
   }
 
   .contentWrapper {
@@ -103,6 +109,10 @@
     > button {
       &:first-child {
         margin-right: 24px;
+
+        @media (max-width: $mobile-width) {
+          margin-right: 6px;
+        }
       }
     }
   }
@@ -111,11 +121,19 @@
 .selectionSection {
   margin-top: 128px;
 
+  @media (max-width: $mobile-width) {
+    margin-top: 70px;
+  }
+
   .prevNext {
     display: flex;
     justify-content: space-between;
     column-gap: 16px;
     margin-bottom: 88px;
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 22px;
+    }
 
     .prevNextItem {
       display: flex;
@@ -124,6 +142,12 @@
       font-size: 16px;
       line-height: 24px;
       color: #090A0B;
+
+      @media (max-width: $mobile-width) {
+        .detailedDescription {
+          display: none;
+        }
+      }
 
       .prevText {
         margin-left: 8px;
@@ -142,6 +166,12 @@
     font-size: 32px;
     line-height: 40px;
     color: #343A40;
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 24px;
+      font-size: 24px;
+      line-height: 32px;
+    }
   }
 
   .mainImage {

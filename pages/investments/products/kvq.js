@@ -76,11 +76,15 @@ export default function KvqPage() {
         <div className={styles.prevNext}>
           <div className={styles.prevNextItem}>
             <ArrowLeft />
-            <div className={styles.prevText}>Last selection and rebalancing date : February 1st 2023</div>
+            <div className={styles.prevText}>
+              <span className={styles.detailedDescription}>Last selection and rebalancing date : </span>February 1st 2023
+            </div>
           </div>
 
           <div className={styles.prevNextItem}>
-            <div className={styles.nextText}>Next selection and rebalancing date : May 1st 2023</div>
+            <div className={styles.nextText}>
+              <span className={styles.detailedDescription}>Next selection and rebalancing date : </span>May 1st 2023
+            </div>
             <ArrowRight />
           </div>
         </div>
@@ -89,7 +93,7 @@ export default function KvqPage() {
           {__text__.SELECTION_TITLE}
         </div>
 
-        <img src="/k33-vinter-quality-index-selection.png" className={styles.mainImage} alt="K33 Vinter quality index selection" />
+        <img src="/k33-vinter-quality-index-selection-table.png" className={styles.mainImage} alt="K33 Vinter quality index selection" />
       </section>
     </Page>
   );

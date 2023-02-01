@@ -49,7 +49,8 @@ export default function KvqPage() {
                 </div>
                 <div className={styles.content}>
                   <div className={styles.name}>Anders Helseth</div>
-                  <div className={styles.email}>anders@k33.com</div>
+                  <div className={styles.details}>VP of Research</div>
+                  <div className={styles.details}>anders@k33.com</div>
                 </div>
               </li>
 
@@ -59,7 +60,8 @@ export default function KvqPage() {
                 </div>
                 <div className={styles.content}>
                   <div className={styles.name}>Torbjørn Bull Jenssen</div>
-                  <div className={styles.email}>tbj@k33.com</div>
+                  <div className={styles.details}>CEO</div>
+                  <div className={styles.details}>tbj@k33.com</div>
                 </div>
               </li>
             </ul>

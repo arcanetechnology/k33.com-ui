@@ -2,7 +2,6 @@
 const __text__ = {
 
   HERO: 'K33-Vinter Quality Index (KVQ)',
-  HERO_SUBTEXT: 'You could write something here',
 
   TITLE: 'What KVQ is?',
 

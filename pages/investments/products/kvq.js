@@ -24,7 +24,6 @@ export default function KvqPage() {
         largerSubText
         noCallToActionButton
         heroText={__text__.HERO}
-        subText={__text__.HERO_SUBTEXT}
         leftImage={<Image src="/kvq-left-bg.png" width={147} height={424} alt="" />}
         rightImage={<Image src="/kvq-right-bg.png" width={145} height={410} alt="" />}
       />
@@ -69,7 +68,8 @@ export default function KvqPage() {
         </div>
 
         <div className={styles.buttons}>
-          <Button>Learn More About</Button>
+          <Button>Methodology (PDF)</Button>
+          <Button>Latest Selection Assessment (PDF)</Button>
           <Button secondary iconRight={<ExternalLink />}>Go To Vinter</Button>
         </div>
       </section>

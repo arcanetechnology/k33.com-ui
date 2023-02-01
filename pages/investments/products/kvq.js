@@ -5,6 +5,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import ArrowLeft from 'svg/ArrowLeft';
 import ArrowRight from 'svg/ArrowRight';
+import DownloadDark from 'svg/DownloadDark';
+import DownloadLight from 'svg/DownloadLight';
 import ExternalLink from 'svg/ExternalLink';
 import __text__ from 'text/kvq';
 import styles from './index.module.scss';
@@ -48,8 +50,8 @@ export default function KvqPage() {
                 </div>
                 <div className={styles.content}>
                   <div className={styles.name}>Anders Helseth</div>
-                  <div className={styles.details}>VP of Research</div>
-                  <div className={styles.details}>anders@k33.com</div>
+                  <div className={styles.jobTitle}>VP of Research</div>
+                  <div className={styles.email}>anders@k33.com</div>
                 </div>
               </li>
 
@@ -59,8 +61,8 @@ export default function KvqPage() {
                 </div>
                 <div className={styles.content}>
                   <div className={styles.name}>Torbjørn Bull Jenssen</div>
-                  <div className={styles.details}>CEO</div>
-                  <div className={styles.details}>tbj@k33.com</div>
+                  <div className={styles.jobTitle}>CEO</div>
+                  <div className={styles.email}>tbj@k33.com</div>
                 </div>
               </li>
             </ul>
@@ -68,8 +70,8 @@ export default function KvqPage() {
         </div>
 
         <div className={styles.buttons}>
-          <Button>Methodology (PDF)</Button>
-          <Button>Latest Selection Assessment (PDF)</Button>
+          <Button iconRight={<DownloadLight />}>Methodology (PDF)</Button>
+          <Button secondary iconRight={<DownloadDark />}>Latest Selection Assessment (PDF)</Button>
           <Button secondary iconRight={<ExternalLink />}>Go To Vinter</Button>
         </div>
       </section>

@@ -93,7 +93,7 @@ export default function KvqPage() {
           {__text__.SELECTION_TITLE}
         </div>
 
-        <img src="/k33-vinter-quality-index-selection-table.png" className={styles.mainImage} alt="K33 Vinter quality index selection" />
+        <img src="/k33-vinter-quality-index-selection.svg" className={styles.mainImage} alt="K33 Vinter quality index selection" />
       </section>
     </Page>
   );

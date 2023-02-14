@@ -70,8 +70,12 @@ export default function KvqPage() {
         </div>
 
         <div className={styles.buttons}>
-          <Button iconRight={<DownloadLight />}>Methodology (PDF)</Button>
-          <Button secondary iconRight={<DownloadDark />}>Latest Selection Assessment (PDF)</Button>
+          <a href="/pdf/PDF-report-Methodology.pdf" target="_blank" download>
+            <Button iconRight={<DownloadLight />}>Methodology (PDF)</Button>
+          </a>
+          <a href="/pdf/PDF-report-Assessment-Jan-2023.pdf" target="_blank" download>
+            <Button secondary iconRight={<DownloadDark />}>Latest Assessment (PDF)</Button>
+          </a>
           <Button secondary iconRight={<ExternalLink />}>Go To Vinter</Button>
         </div>
       </section>

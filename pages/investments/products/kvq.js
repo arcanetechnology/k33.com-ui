@@ -78,6 +78,13 @@ export default function KvqPage() {
           </a>
           <Button secondary iconRight={<ExternalLink />}>Go To Vinter</Button>
         </div>
+
+        <div className={styles.textLine}>View on Bloomberg and Refinitiv</div>
+
+        <div className={styles.buttons}>
+          <Button secondary iconRight={<ExternalLink />}>Bloomberg</Button>
+          <Button secondary iconRight={<ExternalLink />}>Refinitiv</Button>
+        </div>
       </section>
 
       <section className={styles.selectionSection}>

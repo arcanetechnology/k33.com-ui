@@ -76,15 +76,17 @@ export default function KvqPage() {
           <a href="/pdf/PDF-report-Assessment-Jan-2023.pdf" target="_blank" download>
             <Button secondary iconRight={<DownloadDark />}>Latest Assessment (PDF)</Button>
           </a>
-          <Button secondary iconRight={<ExternalLink />}>Go To Vinter</Button>
+          <a href="https://vinter.co/k33">
+            <Button secondary iconRight={<ExternalLink />}>Go To Vinter</Button>
+          </a>
         </div>
 
-        <div className={styles.textLine}>View on Bloomberg and Refinitiv</div>
+        <div className={styles.textLine}>Ticker KVQ on Bloomberg and Refinitiv</div>
 
-        <div className={styles.buttons}>
+        {/* <div className={styles.buttons}>
           <Button secondary iconRight={<ExternalLink />}>Bloomberg</Button>
           <Button secondary iconRight={<ExternalLink />}>Refinitiv</Button>
-        </div>
+        </div> */}
       </section>
 
       <section className={styles.selectionSection}>
